@@ -1,0 +1,30 @@
+1. db.movies.countDocuments({ year: 1980 })
+2. db.movies.countDocuments({ countries: ["Spain"] })
+3. db.movies.countDocuments({ poster: { $exists: false } })
+4. db.movies.distinct("genres")
+5. db.movies.countDocuments({ plot: { $regex: "war", $options: "i" } })
+6. db.movies.countDocuments({ title: { $regex: "\\d$" } })
+7. db.movies.find({ director: "Steven Spielberg" }).sort({ "imdb.rating": -1 }).limit(1).projection({ title: 1, "imdb.rating": 1 })
+8. db.movies.find({ cast: { $all: ["Robert De Niro", "Al Pacino"] } }).sort({ year: -1 }).projection({ title: 1, year: 1 })
+9. db.movies.find({ 
+    cast: "Tom Hanks", 
+    "imdb.rating": { $gte: 8 }, 
+    "awards.wins": { $gt: 22 } 
+}).sort({ title: 1 }).projection({ title: 1, "imdb.rating": 1, "awards.wins": 1 })
+10. db.movies.insertOne({
+    title: "Oppenheimer",
+    genres: ["History", "Biography"],
+    director: "Christopher Nolan",
+    year: 2023
+})
+11. db.movies.updateOne(
+    { title: "Oppenheimer" },
+    { 
+        $set: {
+            countries: ["United States"],
+            runtime: 180,
+            "imdb.rating": 8.3
+        } 
+    }
+)
+12. db.movies.deleteOne({ title: "Oppenheimer" })
