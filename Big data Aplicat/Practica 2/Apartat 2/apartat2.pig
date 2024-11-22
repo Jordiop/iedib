@@ -55,6 +55,7 @@ DUMP total_movies_es;
 science_fiction_series = FILTER data BY genres MATCHES '.*Sci-Fi.*' AND type == 'TV Series';
 total_votes = FOREACH science_fiction_series GENERATE imdbNumVotes;
 total_votes_sum = FOREACH (GROUP total_votes ALL) GENERATE SUM(total_votes);
+DUNP total_votes_sum;
 
 -- 3373251
 
@@ -96,6 +97,7 @@ grouped_by_year = GROUP drama_series BY releaseYear;
 average_rating_by_year = FOREACH grouped_by_year GENERATE group AS year, AVG(drama_series.imdbAverageRating) AS avg_rating;
 sorted_by_rating = ORDER average_rating_by_year BY avg_rating DESC;
 top_5_years = LIMIT sorted_by_rating 5;
+DUMP top_5_years;
 
 -- 1963, 8.3
 -- 1967, 8.15
@@ -114,7 +116,7 @@ STORE export_series INTO 'top_10_series' USING PigStorage(',');
 
 
 -- 10. Total de vots IMDb de les sèries del fitxer exportat:
-loaded_series = LOAD 'output_series_2020_best_rating' USING PigStorage(',') AS (title:chararray, releaseYear:int, imdbAverageRating:float, imdbNumVotes:int);
+loaded_series = LOAD 'top_10_series' USING PigStorage(',') AS (title:chararray, releaseYear:int, imdbAverageRating:float, imdbNumVotes:int);
 total_imdb_votes = FOREACH (GROUP loaded_series ALL) GENERATE SUM(loaded_series.imdbNumVotes);
 DUMP total_imdb_votes;
 
