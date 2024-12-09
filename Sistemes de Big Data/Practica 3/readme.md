@@ -34,6 +34,7 @@ RETURN b.title AS book_title;
 - Tria el títol d'un llibre i recupera quina és la mitjana de les seves valoracions.
 ```
 MATCH (b:Book {title: "The Catcher in the Rye"})<-[:REVIEWS]-(r:Review)
+RETURN AVG(r.rating) AS average_rating;
 ```
 - Recupera el nom dels usuaris nascuts abans de l'any 1990.
 ```
