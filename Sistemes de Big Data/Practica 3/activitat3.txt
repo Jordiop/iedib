@@ -1,0 +1,449 @@
+Crea el teu graf en Neo4j (en el Sandbox o en el teu servidor local) i executa les següents operacions:
+1. Recupera el títol de tots els llibres.
+
+MATCH (b:Book)
+RETURN b.title;
+
+╒══════════════════════╕
+│b.title               │
+╞══════════════════════╡
+│"Duna"                │
+├──────────────────────┤
+│"El nom del vent"     │
+├──────────────────────┤
+│"1984"                │
+├──────────────────────┤
+│"Cien años de soledad"│
+├──────────────────────┤
+│"El codi Da Vinci"    │
+├──────────────────────┤
+│"El Hobbit"           │
+├──────────────────────┤
+│"Neuromancer"         │
+├──────────────────────┤
+│"L'ombra del vent"    │
+├──────────────────────┤
+│"Fundació"            │
+├──────────────────────┤
+│"El silmarillion"     │
+└──────────────────────┘
+
+2. Tria el nom d'un gènere i recupera el nom dels usuaris que hi estan interessats.
+
+MATCH (u:User)-[:INTERESTED_IN]->(g:Genre {name: 'Ciència-ficció'})
+RETURN u.username;
+
+╒══════════════╕
+│u.username    │
+╞══════════════╡
+│"maria_garcia"│
+├──────────────┤
+│"carles_riu"  │
+└──────────────┘
+
+3. Recupera el títol dels llibres i pel·lícules del gènere que has triat abans. Indica en cada cas si és un llibre o una pel·lícula.
+
+MATCH (n)-[:BELONGS_TO]->(g:Genre {name: 'Ciència-ficció'})
+RETURN n.title, CASE WHEN n:Movie THEN 'Pel·lícula' WHEN n:Book THEN 'Llibre' END as tipus;
+
+╒══════════════════╤════════════╕
+│n.title           │tipus       │
+╞══════════════════╪════════════╡
+│"Duna"            │"Llibre"    │
+├──────────────────┼────────────┤
+│"1984"            │"Llibre"    │
+├──────────────────┼────────────┤
+│"Neuromancer"     │"Llibre"    │
+├──────────────────┼────────────┤
+│"Fundació"        │"Llibre"    │
+├──────────────────┼────────────┤
+│"Dune"            │"Pel·lícula"│
+├──────────────────┼────────────┤
+│"Blade Runner"    │"Pel·lícula"│
+├──────────────────┼────────────┤
+│"1984"            │"Pel·lícula"│
+├──────────────────┼────────────┤
+│"Matrix"          │"Pel·lícula"│
+├──────────────────┼────────────┤
+│"Arrival"         │"Pel·lícula"│
+├──────────────────┼────────────┤
+│"Ready Player One"│"Pel·lícula"│
+├──────────────────┼────────────┤
+│"Interstellar"    │"Pel·lícula"│
+└──────────────────┴────────────┘
+
+4. Tria el nom d'un usuari i recupera el títol dels llibres que pertanyen als gèneres que li interessen.
+
+MATCH (u:User {username: 'maria_garcia'})-[:INTERESTED_IN]->(g:Genre)<-[:BELONGS_TO]-(b:Book)
+RETURN b.title;
+
+╒═════════════╕
+│b.title      │
+╞═════════════╡
+│"Duna"       │
+├─────────────┤
+│"1984"       │
+├─────────────┤
+│"Neuromancer"│
+├─────────────┤
+│"Fundació"   │
+└─────────────┘
+
+5. Tria el títol d'un llibre i recupera quina és la mitjana de les seves valoracions.
+
+MATCH (b:Book {title: 'Duna'})<-[r:REVIEWS]-()
+RETURN avg(r.rating) as valoracio_mitjana;
+
+╒═════════════════╕
+│valoracio_mitjana│
+╞═════════════════╡
+│5.0              │
+└─────────────────┘
+
+6. Recupera el nom dels usuaris nascuts abans de l'any 1990.
+
+MATCH (u:User)
+WHERE u.birth_year < 1990
+RETURN u.username, u.birth_year
+ORDER BY u.birth_year;
+
+╒════════════╤════════════╕
+│u.username  │u.birth_year│
+╞════════════╪════════════╡
+│"pere_soler"│1985        │
+├────────────┼────────────┤
+│"pau_cases" │1986        │
+├────────────┼────────────┤
+│"carles_riu"│1987        │
+├────────────┼────────────┤
+│"joan_marti"│1988        │
+├────────────┼────────────┤
+│"david_sans"│1989        │
+└────────────┴────────────┘
+
+7. Recupera el títol de totes les pel·lícules que estan basades en algun llibre. Mostra també el títol del llibre estan basades cada una d'elles.
+
+MATCH (m:Movie)-[:BASED_ON]->(b:Book)
+RETURN m.title as pelicula, b.title as llibre;
+
+╒══════════════════╤══════════════════╕
+│pelicula          │llibre            │
+╞══════════════════╪══════════════════╡
+│"Dune"            │"Duna"            │
+├──────────────────┼──────────────────┤
+│"1984"            │"1984"            │
+├──────────────────┼──────────────────┤
+│"El codi Da Vinci"│"El codi Da Vinci"│
+└──────────────────┴──────────────────┘
+
+8. Recupera el títol dels llibres que tenen una valoració de 4 o més.
+
+MATCH (b:Book)<-[r:REVIEWS]-()
+WHERE r.rating >= 4
+RETURN DISTINCT b.title;
+
+╒══════════════════════╕
+│b.title               │
+╞══════════════════════╡
+│"Duna"                │
+├──────────────────────┤
+│"1984"                │
+├──────────────────────┤
+│"Cien años de soledad"│
+└──────────────────────┘
+
+9. Recupera la valoració mitjana de cada gènere (la mitjana del ratings de totes les revisions dels seus llibres i pel·lícules). Mostra-ho ordenat per la valoració mitjana, de major a menor.
+
+MATCH (g:Genre)<-[:BELONGS_TO]-(n)<-[r:REVIEWS]-()
+RETURN g.name, round(avg(r.rating), 2) as valoracio_mitjana
+ORDER BY valoracio_mitjana DESC;
+
+╒════════════════╤═════════════════╕
+│g.name          │valoracio_mitjana│
+╞════════════════╪═════════════════╡
+│"Drama"         │5.0              │
+├────────────────┼─────────────────┤
+│"Ciència-ficció"│4.5              │
+├────────────────┼─────────────────┤
+│"Fantasia"      │3.5              │
+└────────────────┴─────────────────┘
+
+10. Volem fer grups d'usuaris segons la dècada en què han nascut. Recupera la valoració mitjana de cada grup d'edat (els ratings de totes les revisions que han fet els seus usuaris). Mostra-ho ordenat per dècada, de més antiga a més recent.
+
+MATCH (u:User)-[r:REVIEWS]->()
+WITH u.birth_year/10 * 10 as decada, avg(r.rating) as mitjana
+RETURN decada + 's' as decada, round(mitjana, 2) as valoracio_mitjana
+ORDER BY decada;
+
+╒═══════╤═════════════════╕
+│decada │valoracio_mitjana│
+╞═══════╪═════════════════╡
+│"1980s"│4.0              │
+├───────┼─────────────────┤
+│"1990s"│4.25             │
+└───────┴─────────────────┘
+
+11. Afegeix un nou usuari i una revisió feta per aquest usuari sobre un llibre existent. Dona valor a totes les propietats de l'usuari i de la revisió.
+
+CREATE (u:User {username: 'nou_usuari', birth_year: 1995})
+WITH u
+MATCH (b:Book {title: 'Duna'})
+CREATE (u)-[:REVIEWS {rating: 4, review: 'Molt recomanable'}]->(b);
+
+Added 1 label, created 1 node, set 4 properties, created 1 relationship, completed after 8 ms.
+
+12. Modifica el nou usuari i la nova revisió, de manera que incrementis en 1 l'any de naixement, i baixis en 1 la valoració (rating).
+
+MATCH (u:User {username: 'nou_usuari'})
+SET u.birth_year = u.birth_year + 1;
+MATCH (u:User {username: 'nou_usuari'})-[r:REVIEWS]->()
+SET r.rating = r.rating - 1;
+
+13. Elimina l'usuari i la valoració que has creat.
+
+MATCH (u:User {username: 'nou_usuari'})
+DETACH DELETE u;
+
+Deleted 1 node, deleted 1 relationship, completed after 4 ms.
+
+14. Obté un graf GDS amb els nodes dels usuaris i les relacions d'amistat. Tria un usuari i fes un recorregut en amplitud des d'ell, seguint les relacions d'amistat. Fes després un recorregut en profunditat des del mateix node inicial. En ambdós casos, has d'obtenir la ruta sencera.
+
+CALL gds.graph.drop('social', false);
+
+CALL gds.graph.project(
+    'social',
+    'User',
+    'HAS_FRIEND'
+);
+
+Recorregut en amplitud (BFS) començant per 'maria_garcia'
+
+MATCH (source:User {username: 'maria_garcia'})
+CALL gds.bfs.stream('social', {
+    sourceNode: source
+})
+YIELD path
+RETURN [n IN nodes(path) | n.username] as usuaris;
+
+Recorregut en profunditat (DFS) començant pel mateix usuari
+
+MATCH (source:User {username: 'maria_garcia'})
+CALL gds.dfs.stream('social', {
+    sourceNode: source
+})
+YIELD path
+RETURN [n IN nodes(path) | n.username] as usuaris;
+
+15. Amb el teu graf GDS, tria dos usuaris que no siguin amics i recupera el camí més curt entre ells, emprant les relacions d'amistat, emprant l'algorisme de Dijkstra. 
+
+Buscam dos usuaris que no siguin amics directes
+
+MATCH (u1:User), (u2:User)
+WHERE u1.username < u2.username  // Evitem duplicats
+AND NOT (u1)-[:HAS_FRIEND]->(u2)
+AND NOT (u2)-[:HAS_FRIEND]->(u1)
+RETURN u1.username, u2.username
+LIMIT 1;
+
+I executam la accio
+
+MATCH (source:User {username: 'maria_garcia'}),
+      (target:User {username: 'pau_cases'})
+CALL gds.shortestPath.dijkstra.stream('social', {
+    sourceNode: source,
+    targetNode: target
+})
+YIELD path
+RETURN [node IN nodes(path) | node.username] AS cami_mes_curt;
+
+["maria_garcia", "joan_marti", "pere_soler"]
+
+16. Amb el teu graf GDS, determina el grau d'entrada (influència) de cada usuari, emprant les relacions d'amistat, ordenats de major a menor.
+
+CALL gds.degree.stream('social', {
+    orientation: 'REVERSE'
+})
+YIELD nodeId, score
+MATCH (u:User)
+WHERE id(u) = nodeId
+RETURN u.username AS usuari, score AS grau_entrada
+ORDER BY grau_entrada DESC;
+
+╒══════════════╤════════════╕
+│usuari        │grau_entrada│
+╞══════════════╪════════════╡
+│"maria_garcia"│2.0         │
+├──────────────┼────────────┤
+│"joan_marti"  │2.0         │
+├──────────────┼────────────┤
+│"laura_lopez" │2.0         │
+├──────────────┼────────────┤
+│"pere_soler"  │2.0         │
+├──────────────┼────────────┤
+│"anna_costa"  │2.0         │
+├──────────────┼────────────┤
+│"carles_riu"  │2.0         │
+├──────────────┼────────────┤
+│"marta_vidal" │2.0         │
+├──────────────┼────────────┤
+│"david_sans"  │2.0         │
+├──────────────┼────────────┤
+│"elena_pons"  │2.0         │
+├──────────────┼────────────┤
+│"pau_cases"   │2.0         │
+└──────────────┴────────────┘
+
+17. Amb el teu graf GDS, determina el valor de proximitat (closeness) de cada usuari, emprant les relacions d'amistat, ordenats de major a menor.
+
+CALL gds.closeness.stream('social')
+YIELD nodeId, score
+MATCH (u:User)
+WHERE id(u) = nodeId
+RETURN u.username AS usuari, score AS proximitat
+ORDER BY proximitat DESC;
+
+╒══════════════╤═══════════════════╕
+│usuari        │proximitat         │
+╞══════════════╪═══════════════════╡
+│"pere_soler"  │0.47368421052631576│
+├──────────────┼───────────────────┤
+│"carles_riu"  │0.47368421052631576│
+├──────────────┼───────────────────┤
+│"marta_vidal" │0.47368421052631576│
+├──────────────┼───────────────────┤
+│"elena_pons"  │0.47368421052631576│
+├──────────────┼───────────────────┤
+│"joan_marti"  │0.45               │
+├──────────────┼───────────────────┤
+│"laura_lopez" │0.45               │
+├──────────────┼───────────────────┤
+│"david_sans"  │0.45               │
+├──────────────┼───────────────────┤
+│"maria_garcia"│0.42857142857142855│
+├──────────────┼───────────────────┤
+│"anna_costa"  │0.42857142857142855│
+├──────────────┼───────────────────┤
+│"pau_cases"   │0.42857142857142855│
+└──────────────┴───────────────────┘
+
+18. Amb el teu graf GDS, determina el valor d'intermediació (betweenness) de cada usuari, emprant les relacions d'amistat, ordenats de major a menor.
+
+CALL gds.betweenness.stream('social')
+YIELD nodeId, score
+MATCH (u:User)
+WHERE id(u) = nodeId
+RETURN u.username AS usuari, score AS intermediacio
+ORDER BY intermediacio DESC;
+
+╒══════════════╤══════════════════╕
+│usuari        │intermediacio     │
+╞══════════════╪══════════════════╡
+│"david_sans"  │14.666666666666666│
+├──────────────┼──────────────────┤
+│"carles_riu"  │13.0              │
+├──────────────┼──────────────────┤
+│"joan_marti"  │12.833333333333332│
+├──────────────┼──────────────────┤
+│"elena_pons"  │11.5              │
+├──────────────┼──────────────────┤
+│"pau_cases"   │11.333333333333334│
+├──────────────┼──────────────────┤
+│"anna_costa"  │11.166666666666666│
+├──────────────┼──────────────────┤
+│"marta_vidal" │9.833333333333332 │
+├──────────────┼──────────────────┤
+│"pere_soler"  │9.333333333333332 │
+├──────────────┼──────────────────┤
+│"maria_garcia"│8.166666666666666 │
+├──────────────┼──────────────────┤
+│"laura_lopez" │7.166666666666666 │
+└──────────────┴──────────────────┘
+
+19. Determina el nombre de triangles de cada usuari, emprant les relacions d'amistat, ordenats de major a menor nombre. Per fer-ho, abans has de projectar la part necessària del graf a un nou graf GDS no dirigit.
+
+Primer eliminem el graf anterior si existeix
+CALL gds.graph.drop('social-undirected', false);
+
+Creem un nou graf no dirigit
+CALL gds.graph.project(
+    'social-undirected',
+    'User',
+    {
+        FRIEND: {
+            type: 'HAS_FRIEND',
+            orientation: 'UNDIRECTED'
+        }
+    }
+);
+
+
+CALL gds.triangleCount.stream('social-undirected')
+YIELD nodeId, triangleCount
+MATCH (u:User)
+WHERE id(u) = nodeId
+RETURN u.username AS usuari, triangleCount AS nombre_triangles
+ORDER BY nombre_triangles DESC;
+
+Table
+Text
+Warn
+Code
+╒══════════════╤════════════════╕
+│usuari        │nombre_triangles│
+╞══════════════╪════════════════╡
+│"pere_soler"  │2               │
+├──────────────┼────────────────┤
+│"marta_vidal" │2               │
+├──────────────┼────────────────┤
+│"david_sans"  │1               │
+├──────────────┼────────────────┤
+│"elena_pons"  │1               │
+├──────────────┼────────────────┤
+│"maria_garcia"│0               │
+├──────────────┼────────────────┤
+│"joan_marti"  │0               │
+├──────────────┼────────────────┤
+│"laura_lopez" │0               │
+├──────────────┼────────────────┤
+│"anna_costa"  │0               │
+├──────────────┼────────────────┤
+│"carles_riu"  │0               │
+├──────────────┼────────────────┤
+│"pau_cases"   │0               │
+└──────────────┴────────────────┘
+
+20. Amb el teu graf original, tria dos usuaris que no siguin amics i determina el nombre de veïnats comú.
+
+MATCH (u1:User), (u2:User)
+WHERE u1.username < u2.username  // Per evitar duplicats
+AND NOT (u1)-[:HAS_FRIEND]->(u2)
+AND NOT (u2)-[:HAS_FRIEND]->(u1)
+WITH u1, u2
+MATCH (u1)-[:HAS_FRIEND]->(comun:User)<-[:HAS_FRIEND]-(u2)
+RETURN u1.username AS usuari1,
+       u2.username AS usuari2,
+       collect(comun.username) AS amics_comuns,
+       count(comun) AS nombre_amics_comuns
+ORDER BY nombre_amics_comuns DESC;
+
+╒═════════════╤══════════════╤════════════════╤═══════════════════╕
+│usuari1      │usuari2       │amics_comuns    │nombre_amics_comuns│
+╞═════════════╪══════════════╪════════════════╪═══════════════════╡
+│"carles_riu" │"maria_garcia"│["joan_marti"]  │1                  │
+├─────────────┼──────────────┼────────────────┼───────────────────┤
+│"elena_pons" │"maria_garcia"│["laura_lopez"] │1                  │
+├─────────────┼──────────────┼────────────────┼───────────────────┤
+│"elena_pons" │"joan_marti"  │["pere_soler"]  │1                  │
+├─────────────┼──────────────┼────────────────┼───────────────────┤
+│"david_sans" │"laura_lopez" │["maria_garcia"]│1                  │
+├─────────────┼──────────────┼────────────────┼───────────────────┤
+│"carles_riu" │"pere_soler"  │["marta_vidal"] │1                  │
+├─────────────┼──────────────┼────────────────┼───────────────────┤
+│"anna_costa" │"marta_vidal" │["elena_pons"]  │1                  │
+├─────────────┼──────────────┼────────────────┼───────────────────┤
+│"anna_costa" │"david_sans"  │["pau_cases"]   │1                  │
+├─────────────┼──────────────┼────────────────┼───────────────────┤
+│"joan_marti" │"pau_cases"   │["anna_costa"]  │1                  │
+├─────────────┼──────────────┼────────────────┼───────────────────┤
+│"laura_lopez"│"pau_cases"   │["carles_riu"]  │1                  │
+└─────────────┴──────────────┴────────────────┴───────────────────┘
