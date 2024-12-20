@@ -25,6 +25,10 @@ except Exception as e:
     print("Make sure you've run train.py first to create the models")
     raise
 
+@app.route('/')
+def index():
+    return "Penguin classifier API"
+
 @app.route('/predict/<model_name>', methods=['POST', 'OPTIONS'])
 def predict(model_name):
     if request.method == 'OPTIONS':
@@ -79,4 +83,4 @@ def predict(model_name):
 
 if __name__ == '__main__':
     print("Starting Flask server...")
-    app.run(port=5000, debug=True)
+    app.run(port=8026, debug=True)

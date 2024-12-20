@@ -4,7 +4,7 @@ import sys
 import time
 
 def test_prediction(model_name, data):
-    url = f'http://localhost:5000/predict/{model_name}'
+    url = f'http://localhost:8026/predict/{model_name}'
     headers = {'Content-Type': 'application/json'}
     
     try:
