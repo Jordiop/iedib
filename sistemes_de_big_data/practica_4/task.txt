@@ -1,0 +1,17 @@
+1. Crea la taula vehicles en HBase.
+create 'vehicles', 'info_general', 'conservacio', 'propietari', 'ubicacio'
+
+2.Insereix mitjançant ordres put les tres primeres files de la taula.
+3.Fes un fitxer CSV amb les 3 darreres files i carrega'l a la taula.
+4.Mostra totes les dades de la fila 4 amb un get.
+5.Mostra les dades d'informació general de la taula amb un scan.
+6.Mostra totes les dades dels vehicles amb estat bo.
+7.Mostra les dades dels propietaris dels vehicles de Mallorca.
+8.Mostra la informació general dels vehicles que siguin posteriors al 2017 (inclòs) amb menys de 50000 km.
+9.Modifica la fila 2 i posa-li el telèfon 656123321
+10.Esborra totes les dades la fila 5.
+11.Crea una taula externa en Hive vinculada a la taula vehicles d'HBase.
+12.Fes una consulta en HiveQL que retorni les dades d'informació general dels vehicles de Palma.
+13.Fes una consulta en Impala que retorni totes les dades dels 3 vehicles més cars.
+14.Fes una consulta en HiveQL que agrupi els vehicles per estat i mostri la mitjana de km de cada estat.
+15.Fes una consulta en Impala que agrupi els vehicles per illa i mostri el nombre de vehicles de cada illa.
