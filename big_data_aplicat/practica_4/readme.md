@@ -247,12 +247,10 @@ WHERE array_contains(temes, 'Història');
 #### Impala
 ```sql
 SELECT info_llibre.titol
-FROM llibres
-WHERE temes[0] = 'Història' 
-   OR temes[1] = 'Història'
-   OR temes[2] = 'Història'
-   OR temes[3] = 'Història';
+FROM llibres, llibres.temes AS temes_llibres
+WHERE temes_llibres.item = "Història"
 ```
+![alt text](image-10.png)
 
 ### 3. Recupera el total d'exemplars disponibles a la biblioteca de Llevant.
 #### Hive
@@ -263,9 +261,11 @@ FROM llibres;
 ![alt text](image-7.png)
 #### Impala
 ```sql
-SELECT SUM(exemplars_biblioteca['Llevant']) as total_llevant
-FROM llibres;
+SELECT SUM(copies_llibres.value)
+FROM llibres, llibres.exemplars_biblioteca AS copies_llibres
+WHERE copies_llibres.key = 'Llevant'
 ```
+![alt text](image-12.png)
 
 ### 4. Recupera el títol dels llibres de Ficció disponibles a la biblioteca del Centre.
 #### Hive
@@ -279,17 +279,117 @@ AND exemplars_biblioteca['Centre'] > 0;
 #### Impala
 ```sql
 SELECT info_llibre.titol
-FROM llibres
-WHERE EXISTS (
-  SELECT 1 
-  FROM UNNEST(temes) t 
-  WHERE t = 'Ficció'
-)
-AND exemplars_biblioteca['Centre'] > 0;
+FROM llibres, llibres.exemplars_biblioteca as copies_llibres, llibres.temes as temes_llibres
+WHERE copies_llibres.key = 'Centre' AND copies_llibres.value > 0 AND temes_llibres.item = 'Ficció'
 ```
+![alt text](image-11.png)
 
 
 Les principals diferències entre HiveQL i Impala SQL en aquestes consultes són:
-1. La forma de treballar amb arrays: HiveQL utilitza la funció `array_contains()` mentre que Impala utilitza `UNNEST` amb `EXISTS`
+1. La forma de treballar amb arrays: HiveQL utilitza la funció `array_contains()` 
 2. La sintaxi per intervals: tot i que ambdós accepten BETWEEN, en HiveQL és més comú veure AND
 3. La resta de funcionalitats (accés a structs amb punt, accés a maps amb claus, agregacions) funcionen igual en ambdós motors
+
+## Apartat 3: Centres educatius de les Illes Balears
+Al catàleg de dades obertes de les Illes Balears podem trobar un dataset amb els centres educatius de les Illes Balears, en format JSON. També el pots trobar al repositori del curs. Descarrega aquest fitxer i puja'l a un directori de HDFS.
+
+Crea una taula en el magatzem de dades de Hive, de manera que es pugui emprar en Impala, i carrega-hi les dades que tenim al fitxer JSON. Les etapes educatives (nomEtapa) s'han de tractar com un tipus complex ARRAY.
+
+Important: No pots editar el fitxer prèviament, s'ha de carregar tal qual està publicat.
+
+ALERTA
+ATENCIÓ
+El dia 3/1/2025 han esborrat les dades de tots els centres educatius del catàleg de dades obertes!
+Podeu fer feina amb una còpia del JSON correcte: https://raw.githubusercontent.com/tnavarrete-iedib/bigdata-24-25/refs/heads/main/centres_educatius.json (tot i que només conté els 100 primers centres).
+
+A continuació, fent servir Impala (ja sigui des de Hue o des del shell), has d'executar les consultes següents:
+
+Crearem la taula amb la seguent comanda:
+```sql
+CREATE DATABASE IF NOT EXISTS illes 
+
+CREATE EXTERNAL TABLE ext_centres (centre STRING)
+LOCATION '/user/hive/data'
+
+CREATE TABLE illes.centre (
+    adreca STRING,
+    cif STRING,
+    codiIlla STRING,
+    codiMunicipi STRING,
+    codiOficial STRING,
+    cp STRING,
+    esPublic BOOLEAN,
+    latitud DOUBLE,
+    longitud DOUBLE,
+    mail STRING,
+    nom STRING,
+    nomEtapa ARRAY<STRING>,
+    nomIlla STRING,
+    nomMunicipi STRING,
+    telf1 STRING,
+    tipusCentreNomCa STRING,
+    web STRING
+) STORED AS PARQUET;
+
+INSERT INTO TABLE centre
+SELECT
+    get_json_object(centre,'$.adreca') AS adreca,
+    get_json_object(centre,'$.cif') AS cif,
+    get_json_object(centre,'$.codiIlla') AS codiIlla,
+    get_json_object(centre,'$.codiMunicipi') AS codiMunicipi,
+    get_json_object(centre,'$.codiMunicipi') AS codiMunicipi,
+    get_json_object(centre,'$.cp') AS cp,
+    CAST(get_json_object(centre, '$.esPublic') AS BOOLEAN) AS esPublic,
+    CAST(get_json_object(centre, '$.latitud') AS DOUBLE) AS latitud,
+    CAST(get_json_object(centre, '$.longituf') AS DOUBLE) AS longitud,
+    get_json_object(centre,'$.mail') AS mail,
+    get_json_object(centre,'$.nom') AS nom,
+    SPLIT(get_json_object(centre, '$.nomEtapa'), ', ') AS nomEtapa,
+    get_json_object(centre,'$.nomIlla') AS nomIlla,
+    get_json_object(centre,'$.nomMunicipi') AS nomMunicipi,
+    get_json_object(centre,'$.telf1') AS telf1,
+    get_json_object(centre,'$.tipusCentreNomCa') AS tipusCentreNomCa,
+    get_json_object(centre,'$.web') AS web
+FROM ext_centres;
+
+SELECT *  FROM centre; 
+
+-- Invalidem les taules per a que es refresquin les dades
+INVALIDATE METADATA centre;
+``` 
+![alt text](image-14.png)
+
+- Recupera el nombre de centres públics (esPublic serà true) de l'illa d'Eivissa.
+```sql
+SELECT COUNT(*) as total_centres
+FROM centres_educatius_final
+WHERE esPublic = true 
+AND nomIlla = 'Eivissa';
+```
+
+- Recupera el nom de tots els instituts d'educació secundària del municipi (nomMunicipi) de Palma.
+```sql
+SELECT nom
+FROM centres_educatius_final
+WHERE tipusCentreNomCa = 'Institut d\'educació secundària'
+AND nomMunicipi = 'Palma';
+```
+
+- Recupera el nombre de centres de cada tipus (tipusCentreNomCa) de l'illa de Menorca.
+```sql
+SELECT tipusCentreNomCa, COUNT(*) as total
+FROM centres_educatius_final
+WHERE nomIlla = 'Menorca'
+GROUP BY tipusCentreNomCa
+ORDER BY total DESC;
+```
+
+- Recupera el nom de tots els centres de l'illa de Mallorca que ofereixen estudis de l'etapa (nomEtapa) "Grau superior".
+```sql
+SELECT nom
+FROM centres_educatius_final
+WHERE nomIlla = 'Mallorca'
+AND array_contains(nomEtapa, 'Grau superior');
+```
+
+![alt text](image-13.png)

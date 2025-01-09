@@ -1,0 +1,73 @@
+CREATE TABLE centres_educatius (
+    dateDownload STRING,
+    itemsReturned INT,
+    name STRING,
+    nextPageUrl STRING,
+    page INT,
+    pageSize INT,
+    totalCount INT,
+    totalPages INT,
+    data ARRAY<STRUCT
+        adreca: STRING,
+        cif: STRING,
+        codiIlla: STRING,
+        codiMunicipi: STRING,
+        codiOficial: STRING,
+        cp: STRING,
+        esPublic: BOOLEAN,
+        latitud: DOUBLE,
+        longitud: DOUBLE,
+        mail: STRING,
+        nom: STRING,
+        nomEtapa: STRING,
+        nomIlla: STRING,
+        nomMunicipi: STRING,
+        telf1: STRING,
+        tipologia: STRING,
+        tipusCentreNomCa: STRING,
+        web: STRING
+    >>
+) STORED AS PARQUET;
+
+CREATE TABLE centres_educatius_final (
+    adreca STRING,
+    cif STRING,
+    codiIlla STRING,
+    codiMunicipi STRING,
+    codiOficial STRING,
+    cp STRING,
+    esPublic BOOLEAN,
+    latitud DOUBLE,
+    longitud DOUBLE,
+    mail STRING,
+    nom STRING,
+    nomEtapa ARRAY<STRING>,
+    nomIlla STRING,
+    nomMunicipi STRING,
+    telf1 STRING,
+    tipologia STRING,
+    tipusCentreNomCa STRING,
+    web STRING
+) STORED AS PARQUET;
+
+INSERT INTO centres_educatius_final
+SELECT 
+    adreca,
+    cif,
+    codiIlla,
+    codiMunicipi,
+    codiOficial,
+    cp,
+    esPublic,
+    latitud,
+    longitud,
+    mail,
+    nom,
+    split(nomEtapa, ', ') as nomEtapa,
+    nomIlla,
+    nomMunicipi,
+    telf1,
+    tipologia,
+    tipusCentreNomCa,
+    web
+FROM centres_educatius LATERAL VIEW explode(data) d AS col;
