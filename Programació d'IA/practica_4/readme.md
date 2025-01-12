@@ -64,23 +64,33 @@ Es configuren els limits com estan especificats a l'enunciat.
 
 ![alt text](image-11.png)
 
+Aqui, es pot observar lo del error de GPU. Posteriorment ha desaparegut.
 ![alt text](image-12.png)
 
+Resum
+
 ![alt text](image-13.png)
+
+I aqui tenim el dashboard:
 
 ![alt text](image-14.png)
 
 ![alt text](image-15.png)
 
+## Visualització de resultats
+### Hiperparàmetres
 ![alt text](image-16.png)
 
+### Mètriques
 ![alt text](image-17.png)
 
 ![alt text](image-18.png)
 ![alt text](image-19.png)
 
+### Matriu de confusió
 ![alt text](image-20.png)
 
+### Neteja
 ![alt text](image-21.png)
 ![alt text](image-22.png)
 
@@ -164,3 +174,17 @@ b'{"Results": ["Gentoo", "Chinstrap"]}'
 ![alt text](image-25.png)
 
 ![alt text](image-26.png)
+
+## Apartat 2: Servei de veu d'Azure AI
+
+Anam a treballar amb el servei de veu d'Azure AI i el Speech Studio. 
+
+Heu de crear el recurs necessari per treballar amb aquest studio i anem a provar dues funcionalitats.
+
+2.1. En el bloc de "Conversión de voz en texto", anam a provar la funcionalitat "Voz a texto en tiempo real". Grava un vídeo provant la funcionalitat en temps real, emprant l'entrada de micròfon del micro (tria l'idioma català o alguna de les variants d'espanyol per fer-ho). Xerra almenys 20 segons.
+
+2.2. En el bloc "Texto a voz", anam a provar la funcionalitat de "Galería de voz", que permet passar text a veu, seleccionant entre diferents veus configurades. Grava un vídeo provant totes les veus disponibles en català llegint un text en català que hagis escrit tu (d'almenys 50 paraules).
+
+[Video 1](https://drive.google.com/file/d/1GnQu31svxS08LNVVn_SCQaU5ENXi4-WF/view?usp=drive_link)
+
+[Video 2](https://drive.google.com/file/d/1_o4M0cAk_0DR1PaO8fy5AIzJ6lP7YjuV/view?usp=drive_link)

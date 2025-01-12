@@ -1,0 +1,4242 @@
+[
+    {
+        "Id": "d3225620556e48b9ad4733ff050ac2b8",
+        "RecognitionStatus": 0,
+        "Offset": 17700000,
+        "Duration": 284000000,
+        "Channel": 0,
+        "DisplayText": "El hombre, desde su origen, guiado por unas miras que pretenden ser prácticas, ha ido enmendando la plana naturaleza y convirtiéndola en campo. El hombre paso a paso ha hecho su paisaje, amoldándolo sus exigencias. Con esto el campo ha seguido siendo campo, pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles. Ha empobrecido la naturaleza original, lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy, pero ignora lo que le será útil mañana y al aceptar las especies actualmente.",
+        "NBest": [
+            {
+                "Confidence": 0.86499774,
+                "Lexical": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándolo sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "ITN": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándolo sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "MaskedITN": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándolo sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Display": "El hombre, desde su origen, guiado por unas miras que pretenden ser prácticas, ha ido enmendando la plana naturaleza y convirtiéndola en campo. El hombre paso a paso ha hecho su paisaje, amoldándolo sus exigencias. Con esto el campo ha seguido siendo campo, pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles. Ha empobrecido la naturaleza original, lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy, pero ignora lo que le será útil mañana y al aceptar las especies actualmente.",
+                "Words": [
+                    {
+                        "Word": "el",
+                        "Offset": 17700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 20100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "desde",
+                        "Offset": 23300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 25300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "origen",
+                        "Offset": 27700000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "guiado",
+                        "Offset": 33300000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "por",
+                        "Offset": 36500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "unas",
+                        "Offset": 37700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "miras",
+                        "Offset": 41300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 44900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "pretenden",
+                        "Offset": 45700000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 49700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "prácticas",
+                        "Offset": 50900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 56900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ido",
+                        "Offset": 57700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enmendando",
+                        "Offset": 59300000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 64500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "plana",
+                        "Offset": 66900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 69700000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 74900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "convirtiéndola",
+                        "Offset": 75300000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 81700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 83300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 91300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 92900000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 95300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 96900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 97300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 101300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hecho",
+                        "Offset": 102900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 104500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "paisaje",
+                        "Offset": 106100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "amoldándolo",
+                        "Offset": 110500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "sus",
+                        "Offset": 115700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "exigencias",
+                        "Offset": 117700000,
+                        "Duration": 8000000
+                    },
+                    {
+                        "Word": "con",
+                        "Offset": 127700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "esto",
+                        "Offset": 130100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 134100000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 136100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 139300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seguido",
+                        "Offset": 140100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "siendo",
+                        "Offset": 143300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 145700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 149300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 150900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "dejado",
+                        "Offset": 151300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 153700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 154500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 155700000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "más",
+                        "Offset": 164500000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 168100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seleccionar",
+                        "Offset": 168900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 173300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "plantas",
+                        "Offset": 174500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 177300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 177700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 180900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 181700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "son",
+                        "Offset": 183300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "útiles",
+                        "Offset": 184500000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 189700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "empobrecido",
+                        "Offset": 190900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 195300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 196900000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "original",
+                        "Offset": 200900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 208500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 210100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "equivale",
+                        "Offset": 210900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 213700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "decir",
+                        "Offset": 214100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 217700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 219300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "tomado",
+                        "Offset": 220100000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "una",
+                        "Offset": 225300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resolución",
+                        "Offset": 226900000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "precipitada",
+                        "Offset": 232500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "porque",
+                        "Offset": 239700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 242900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 244500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "sabe",
+                        "Offset": 246500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 249300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 252500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 253300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "es",
+                        "Offset": 255300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 257700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "hoy",
+                        "Offset": 259700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 261700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "ignora",
+                        "Offset": 263700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 266100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 267700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 268500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "será",
+                        "Offset": 270100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 273300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 276100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 283300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "al",
+                        "Offset": 283700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "aceptar",
+                        "Offset": 285300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 289700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 291300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "actualmente",
+                        "Offset": 295700000,
+                        "Duration": 6000000
+                    }
+                ]
+            },
+            {
+                "Confidence": 0.8643995,
+                "Lexical": "el hombre desde su origen guiado por unas miras que pretende ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándolo sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "ITN": "el hombre desde su origen guiado por unas miras que pretende ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándolo sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "MaskedITN": "el hombre desde su origen guiado por unas miras que pretende ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándolo sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Display": "el hombre desde su origen guiado por unas miras que pretende ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándolo sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Words": [
+                    {
+                        "Word": "el",
+                        "Offset": 17700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 20100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "desde",
+                        "Offset": 23300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 25300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "origen",
+                        "Offset": 27700000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "guiado",
+                        "Offset": 33300000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "por",
+                        "Offset": 36500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "unas",
+                        "Offset": 37700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "miras",
+                        "Offset": 41300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 44900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "pretende",
+                        "Offset": 45700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 49300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "prácticas",
+                        "Offset": 50900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 56900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ido",
+                        "Offset": 57700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enmendando",
+                        "Offset": 59300000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 64500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "plana",
+                        "Offset": 66900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 69700000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 74900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "convirtiéndola",
+                        "Offset": 75300000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 81700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 83300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 91300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 92900000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 95300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 96900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 97300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 101300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hecho",
+                        "Offset": 102900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 104500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "paisaje",
+                        "Offset": 106100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "amoldándolo",
+                        "Offset": 110500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "sus",
+                        "Offset": 115700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "exigencias",
+                        "Offset": 117700000,
+                        "Duration": 8000000
+                    },
+                    {
+                        "Word": "con",
+                        "Offset": 127700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "esto",
+                        "Offset": 130100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 134100000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 136100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 139300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seguido",
+                        "Offset": 140100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "siendo",
+                        "Offset": 143300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 145700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 149300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 150900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "dejado",
+                        "Offset": 151300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 153700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 154500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 155700000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "más",
+                        "Offset": 164500000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 168100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seleccionar",
+                        "Offset": 168900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 173300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "plantas",
+                        "Offset": 174500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 177300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 177700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 180900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 181700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "son",
+                        "Offset": 183300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "útiles",
+                        "Offset": 184500000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 189700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "empobrecido",
+                        "Offset": 190900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 195300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 196900000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "original",
+                        "Offset": 200900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 208500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 210100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "equivale",
+                        "Offset": 210900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 213700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "decir",
+                        "Offset": 214100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 217700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 219300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "tomado",
+                        "Offset": 220100000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "una",
+                        "Offset": 225300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resolución",
+                        "Offset": 226900000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "precipitada",
+                        "Offset": 232500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "porque",
+                        "Offset": 239700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 242900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 244500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "sabe",
+                        "Offset": 246500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 249300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 252500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 253300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "es",
+                        "Offset": 255300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 257700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "hoy",
+                        "Offset": 259700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 261700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "ignora",
+                        "Offset": 263700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 266100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 267700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 268500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "será",
+                        "Offset": 270100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 273300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 276100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 283300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "al",
+                        "Offset": 283700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "aceptar",
+                        "Offset": 285300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 289700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 291300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "actualmente",
+                        "Offset": 295700000,
+                        "Duration": 6000000
+                    }
+                ]
+            },
+            {
+                "Confidence": 0.86778426,
+                "Lexical": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldando sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "ITN": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldando sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "MaskedITN": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldando sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Display": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldando sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Words": [
+                    {
+                        "Word": "el",
+                        "Offset": 17700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 20100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "desde",
+                        "Offset": 23300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 25300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "origen",
+                        "Offset": 27700000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "guiado",
+                        "Offset": 33300000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "por",
+                        "Offset": 36500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "unas",
+                        "Offset": 37700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "miras",
+                        "Offset": 41300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 44900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "pretenden",
+                        "Offset": 45700000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 49700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "prácticas",
+                        "Offset": 50900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 56900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ido",
+                        "Offset": 57700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enmendando",
+                        "Offset": 59300000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 64500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "plana",
+                        "Offset": 66900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 69700000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 74900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "convirtiéndola",
+                        "Offset": 75300000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 81700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 83300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 91300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 92900000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 95300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 96900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 97300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 101300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hecho",
+                        "Offset": 102900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 104500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "paisaje",
+                        "Offset": 106100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "amoldando",
+                        "Offset": 110500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "sus",
+                        "Offset": 115700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "exigencias",
+                        "Offset": 117700000,
+                        "Duration": 8000000
+                    },
+                    {
+                        "Word": "con",
+                        "Offset": 127700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "esto",
+                        "Offset": 130100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 134100000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 136100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 139300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seguido",
+                        "Offset": 140100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "siendo",
+                        "Offset": 143300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 145700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 149300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 150900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "dejado",
+                        "Offset": 151300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 153700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 154500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 155700000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "más",
+                        "Offset": 164500000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 168100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seleccionar",
+                        "Offset": 168900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 173300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "plantas",
+                        "Offset": 174500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 177300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 177700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 180900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 181700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "son",
+                        "Offset": 183300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "útiles",
+                        "Offset": 184500000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 189700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "empobrecido",
+                        "Offset": 190900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 195300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 196900000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "original",
+                        "Offset": 200900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 208500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 210100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "equivale",
+                        "Offset": 210900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 213700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "decir",
+                        "Offset": 214100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 217700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 219300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "tomado",
+                        "Offset": 220100000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "una",
+                        "Offset": 225300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resolución",
+                        "Offset": 226900000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "precipitada",
+                        "Offset": 232500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "porque",
+                        "Offset": 239700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 242900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 244500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "sabe",
+                        "Offset": 246500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 249300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 252500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 253300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "es",
+                        "Offset": 255300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 257700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "hoy",
+                        "Offset": 259700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 261700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "ignora",
+                        "Offset": 263700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 266100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 267700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 268500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "será",
+                        "Offset": 270100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 273300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 276100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 283300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "al",
+                        "Offset": 283700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "aceptar",
+                        "Offset": 285300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 289700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 291300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "actualmente",
+                        "Offset": 295700000,
+                        "Duration": 6000000
+                    }
+                ]
+            },
+            {
+                "Confidence": 0.86705595,
+                "Lexical": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándole sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "ITN": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándole sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "MaskedITN": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándole sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Display": "el hombre desde su origen guiado por unas miras que pretenden ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldándole sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Words": [
+                    {
+                        "Word": "el",
+                        "Offset": 17700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 20100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "desde",
+                        "Offset": 23300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 25300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "origen",
+                        "Offset": 27700000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "guiado",
+                        "Offset": 33300000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "por",
+                        "Offset": 36500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "unas",
+                        "Offset": 37700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "miras",
+                        "Offset": 41300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 44900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "pretenden",
+                        "Offset": 45700000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 49700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "prácticas",
+                        "Offset": 50900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 56900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ido",
+                        "Offset": 57700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enmendando",
+                        "Offset": 59300000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 64500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "plana",
+                        "Offset": 66900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 69700000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 74900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "convirtiéndola",
+                        "Offset": 75300000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 81700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 83300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 91300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 92900000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 95300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 96900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 97300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 101300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hecho",
+                        "Offset": 102900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 104500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "paisaje",
+                        "Offset": 106100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "amoldándole",
+                        "Offset": 110500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "sus",
+                        "Offset": 115700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "exigencias",
+                        "Offset": 117700000,
+                        "Duration": 8000000
+                    },
+                    {
+                        "Word": "con",
+                        "Offset": 127700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "esto",
+                        "Offset": 130100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 134100000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 136100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 139300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seguido",
+                        "Offset": 140100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "siendo",
+                        "Offset": 143300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 145700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 149300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 150900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "dejado",
+                        "Offset": 151300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 153700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 154500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 155700000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "más",
+                        "Offset": 164500000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 168100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seleccionar",
+                        "Offset": 168900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 173300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "plantas",
+                        "Offset": 174500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 177300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 177700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 180900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 181700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "son",
+                        "Offset": 183300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "útiles",
+                        "Offset": 184500000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 189700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "empobrecido",
+                        "Offset": 190900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 195300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 196900000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "original",
+                        "Offset": 200900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 208500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 210100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "equivale",
+                        "Offset": 210900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 213700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "decir",
+                        "Offset": 214100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 217700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 219300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "tomado",
+                        "Offset": 220100000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "una",
+                        "Offset": 225300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resolución",
+                        "Offset": 226900000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "precipitada",
+                        "Offset": 232500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "porque",
+                        "Offset": 239700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 242900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 244500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "sabe",
+                        "Offset": 246500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 249300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 252500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 253300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "es",
+                        "Offset": 255300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 257700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "hoy",
+                        "Offset": 259700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 261700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "ignora",
+                        "Offset": 263700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 266100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 267700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 268500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "será",
+                        "Offset": 270100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 273300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 276100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 283300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "al",
+                        "Offset": 283700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "aceptar",
+                        "Offset": 285300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 289700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 291300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "actualmente",
+                        "Offset": 295700000,
+                        "Duration": 6000000
+                    }
+                ]
+            },
+            {
+                "Confidence": 0.867186,
+                "Lexical": "el hombre desde su origen guiado por unas miras que pretende ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldando sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "ITN": "el hombre desde su origen guiado por unas miras que pretende ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldando sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "MaskedITN": "el hombre desde su origen guiado por unas miras que pretende ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldando sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Display": "el hombre desde su origen guiado por unas miras que pretende ser prácticas ha ido enmendando la plana naturaleza y convirtiéndola en campo el hombre paso a paso ha hecho su paisaje amoldando sus exigencias con esto el campo ha seguido siendo campo pero ha dejado de ser naturaleza más a seleccionar las plantas y animales que le son útiles ha empobrecido la naturaleza original lo que equivale a decir que ha tomado una resolución precipitada porque el hombre sabe lo que le es útil hoy pero ignora lo que le será útil mañana y al aceptar las especies actualmente",
+                "Words": [
+                    {
+                        "Word": "el",
+                        "Offset": 17700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 20100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "desde",
+                        "Offset": 23300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 25300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "origen",
+                        "Offset": 27700000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "guiado",
+                        "Offset": 33300000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "por",
+                        "Offset": 36500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "unas",
+                        "Offset": 37700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "miras",
+                        "Offset": 41300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 44900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "pretende",
+                        "Offset": 45700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 49300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "prácticas",
+                        "Offset": 50900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 56900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ido",
+                        "Offset": 57700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enmendando",
+                        "Offset": 59300000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 64500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "plana",
+                        "Offset": 66900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 69700000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 74900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "convirtiéndola",
+                        "Offset": 75300000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 81700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 83300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 91300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 92900000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 95300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 96900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "paso",
+                        "Offset": 97300000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 101300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hecho",
+                        "Offset": 102900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "su",
+                        "Offset": 104500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "paisaje",
+                        "Offset": 106100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "amoldando",
+                        "Offset": 110500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "sus",
+                        "Offset": 115700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "exigencias",
+                        "Offset": 117700000,
+                        "Duration": 8000000
+                    },
+                    {
+                        "Word": "con",
+                        "Offset": 127700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "esto",
+                        "Offset": 130100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 134100000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 136100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 139300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seguido",
+                        "Offset": 140100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "siendo",
+                        "Offset": 143300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "campo",
+                        "Offset": 145700000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 149300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 150900000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "dejado",
+                        "Offset": 151300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 153700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "ser",
+                        "Offset": 154500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 155700000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "más",
+                        "Offset": 164500000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 168100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "seleccionar",
+                        "Offset": 168900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 173300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "plantas",
+                        "Offset": 174500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 177300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 177700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 180900000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 181700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "son",
+                        "Offset": 183300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "útiles",
+                        "Offset": 184500000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 189700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "empobrecido",
+                        "Offset": 190900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 195300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 196900000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "original",
+                        "Offset": 200900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 208500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 210100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "equivale",
+                        "Offset": 210900000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "a",
+                        "Offset": 213700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "decir",
+                        "Offset": 214100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 217700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "ha",
+                        "Offset": 219300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "tomado",
+                        "Offset": 220100000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "una",
+                        "Offset": 225300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resolución",
+                        "Offset": 226900000,
+                        "Duration": 5600000
+                    },
+                    {
+                        "Word": "precipitada",
+                        "Offset": 232500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "porque",
+                        "Offset": 239700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 242900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hombre",
+                        "Offset": 244500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "sabe",
+                        "Offset": 246500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 249300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 252500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 253300000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "es",
+                        "Offset": 255300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 257700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "hoy",
+                        "Offset": 259700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "pero",
+                        "Offset": 261700000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "ignora",
+                        "Offset": 263700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "lo",
+                        "Offset": 266100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 267700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "le",
+                        "Offset": 268500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "será",
+                        "Offset": 270100000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "útil",
+                        "Offset": 273300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 276100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 283300000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "al",
+                        "Offset": 283700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "aceptar",
+                        "Offset": 285300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 289700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 291300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "actualmente",
+                        "Offset": 295700000,
+                        "Duration": 6000000
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Id": "f39ff0463a7e4adc93059cb36c96ab84",
+        "RecognitionStatus": 0,
+        "Offset": 305500000,
+        "Duration": 200000000,
+        "Channel": 0,
+        "DisplayText": "Y desdeñar el resto supondría, según nos dice Faustino cordón, sacrificar la friolera de 1000000 de especies animales y medio 1000000 de especies vegetales, limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana. Así las cosas, y es algo muy contadas, reservas apenas queda en El Mundo naturaleza natural.",
+        "NBest": [
+            {
+                "Confidence": 0.83869225,
+                "Lexical": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "ITN": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de 1000000 de especies animales y medio 1000000 de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "MaskedITN": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de 1000000 de especies animales y medio 1000000 de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "Display": "Y desdeñar el resto supondría, según nos dice Faustino cordón, sacrificar la friolera de 1000000 de especies animales y medio 1000000 de especies vegetales, limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana. Así las cosas, y es algo muy contadas, reservas apenas queda en El Mundo naturaleza natural.",
+                "Words": [
+                    {
+                        "Word": "y",
+                        "Offset": 305500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "desdeñar",
+                        "Offset": 307100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 311900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resto",
+                        "Offset": 313500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "supondría",
+                        "Offset": 315900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "según",
+                        "Offset": 320700000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "nos",
+                        "Offset": 323500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "dice",
+                        "Offset": 324700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "faustino",
+                        "Offset": 327100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "cordón",
+                        "Offset": 331900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "sacrificar",
+                        "Offset": 338700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 343500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "friolera",
+                        "Offset": 345100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 348700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 349900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 351500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 353500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 354300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 357900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 362300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "medio",
+                        "Offset": 363500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 366300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 369100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 369900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "vegetales",
+                        "Offset": 373100000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "limitación",
+                        "Offset": 383500000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "inconcebible",
+                        "Offset": 389500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 396700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 398300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "patrimonio",
+                        "Offset": 403900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 409900000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "no",
+                        "Offset": 411100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "podemos",
+                        "Offset": 411900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "recrear",
+                        "Offset": 415100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 419100000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "del",
+                        "Offset": 420300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 423100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "quizá",
+                        "Offset": 424700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "dependieran",
+                        "Offset": 427900000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "los",
+                        "Offset": 435100000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "remedios",
+                        "Offset": 437900000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "para",
+                        "Offset": 443100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 444700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hambre",
+                        "Offset": 446300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 448700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 449100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enfermedad",
+                        "Offset": 450700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 455500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 456300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "así",
+                        "Offset": 463100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 467500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "cosas",
+                        "Offset": 469500000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 472700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "es",
+                        "Offset": 473100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "algo",
+                        "Offset": 474700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "muy",
+                        "Offset": 476300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "contadas",
+                        "Offset": 477900000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "reservas",
+                        "Offset": 481500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "apenas",
+                        "Offset": 486700000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "queda",
+                        "Offset": 490700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 492300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 493900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "mundo",
+                        "Offset": 495500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 497500000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "natural",
+                        "Offset": 502300000,
+                        "Duration": 3200000
+                    }
+                ]
+            },
+            {
+                "Confidence": 0.84379417,
+                "Lexical": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y salgo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "ITN": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y salgo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "MaskedITN": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y salgo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "Display": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y salgo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "Words": [
+                    {
+                        "Word": "y",
+                        "Offset": 305500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "desdeñar",
+                        "Offset": 307100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 311900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resto",
+                        "Offset": 313500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "supondría",
+                        "Offset": 315900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "según",
+                        "Offset": 320700000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "nos",
+                        "Offset": 323500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "dice",
+                        "Offset": 324700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "faustino",
+                        "Offset": 327100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "cordón",
+                        "Offset": 331900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "sacrificar",
+                        "Offset": 338700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 343500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "friolera",
+                        "Offset": 345100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 348700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 349900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 351500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 353500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 354300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 357900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 362300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "medio",
+                        "Offset": 363500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 366300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 369100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 369900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "vegetales",
+                        "Offset": 373100000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "limitación",
+                        "Offset": 383500000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "inconcebible",
+                        "Offset": 389500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 396700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 398300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "patrimonio",
+                        "Offset": 403900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 409900000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "no",
+                        "Offset": 411100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "podemos",
+                        "Offset": 411900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "recrear",
+                        "Offset": 415100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 419100000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "del",
+                        "Offset": 420300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 423100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "quizá",
+                        "Offset": 424700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "dependieran",
+                        "Offset": 427900000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "los",
+                        "Offset": 435100000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "remedios",
+                        "Offset": 437900000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "para",
+                        "Offset": 443100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 444700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hambre",
+                        "Offset": 446300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 448700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 449100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enfermedad",
+                        "Offset": 450700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 455500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 456300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "así",
+                        "Offset": 463100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 467500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "cosas",
+                        "Offset": 469500000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 472700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "salgo",
+                        "Offset": 473500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "muy",
+                        "Offset": 476300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "contadas",
+                        "Offset": 477900000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "reservas",
+                        "Offset": 481500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "apenas",
+                        "Offset": 486700000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "queda",
+                        "Offset": 490700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 492300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 493900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "mundo",
+                        "Offset": 495500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 497500000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "natural",
+                        "Offset": 502300000,
+                        "Duration": 3200000
+                    }
+                ]
+            },
+            {
+                "Confidence": 0.8153938,
+                "Lexical": "es y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "ITN": "es y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "MaskedITN": "es y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "Display": "es y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "Words": [
+                    {
+                        "Word": "es",
+                        "Offset": 304700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 306300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "desdeñar",
+                        "Offset": 307100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 311900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resto",
+                        "Offset": 313500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "supondría",
+                        "Offset": 315900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "según",
+                        "Offset": 320700000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "nos",
+                        "Offset": 323500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "dice",
+                        "Offset": 324700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "faustino",
+                        "Offset": 327100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "cordón",
+                        "Offset": 331900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "sacrificar",
+                        "Offset": 338700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 343500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "friolera",
+                        "Offset": 345100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 348700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 349900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 351500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 353500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 354300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 357900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 362300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "medio",
+                        "Offset": 363500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 366300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 369100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 369900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "vegetales",
+                        "Offset": 373100000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "limitación",
+                        "Offset": 383500000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "inconcebible",
+                        "Offset": 389500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 396700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 398300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "patrimonio",
+                        "Offset": 403900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 409900000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "no",
+                        "Offset": 411100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "podemos",
+                        "Offset": 411900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "recrear",
+                        "Offset": 415100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 419100000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "del",
+                        "Offset": 420300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 423100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "quizá",
+                        "Offset": 424700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "dependieran",
+                        "Offset": 427900000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "los",
+                        "Offset": 435100000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "remedios",
+                        "Offset": 437900000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "para",
+                        "Offset": 443100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 444700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hambre",
+                        "Offset": 446300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 448700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 449100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enfermedad",
+                        "Offset": 450700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 455500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 456300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "así",
+                        "Offset": 463100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 467500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "cosas",
+                        "Offset": 469500000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 472700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "es",
+                        "Offset": 473100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "algo",
+                        "Offset": 474700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "muy",
+                        "Offset": 476300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "contadas",
+                        "Offset": 477900000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "reservas",
+                        "Offset": 481500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "apenas",
+                        "Offset": 486700000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "queda",
+                        "Offset": 490700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 492300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 493900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "mundo",
+                        "Offset": 495500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 497500000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "natural",
+                        "Offset": 502300000,
+                        "Duration": 3200000
+                    }
+                ]
+            },
+            {
+                "Confidence": 0.820059,
+                "Lexical": "es y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y salgo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "ITN": "es y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y salgo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "MaskedITN": "es y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y salgo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "Display": "es y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y salgo muy contadas reservas apenas queda en el mundo naturaleza natural",
+                "Words": [
+                    {
+                        "Word": "es",
+                        "Offset": 304700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 306300000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "desdeñar",
+                        "Offset": 307100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 311900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resto",
+                        "Offset": 313500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "supondría",
+                        "Offset": 315900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "según",
+                        "Offset": 320700000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "nos",
+                        "Offset": 323500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "dice",
+                        "Offset": 324700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "faustino",
+                        "Offset": 327100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "cordón",
+                        "Offset": 331900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "sacrificar",
+                        "Offset": 338700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 343500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "friolera",
+                        "Offset": 345100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 348700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 349900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 351500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 353500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 354300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 357900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 362300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "medio",
+                        "Offset": 363500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 366300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 369100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 369900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "vegetales",
+                        "Offset": 373100000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "limitación",
+                        "Offset": 383500000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "inconcebible",
+                        "Offset": 389500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 396700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 398300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "patrimonio",
+                        "Offset": 403900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 409900000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "no",
+                        "Offset": 411100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "podemos",
+                        "Offset": 411900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "recrear",
+                        "Offset": 415100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 419100000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "del",
+                        "Offset": 420300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 423100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "quizá",
+                        "Offset": 424700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "dependieran",
+                        "Offset": 427900000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "los",
+                        "Offset": 435100000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "remedios",
+                        "Offset": 437900000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "para",
+                        "Offset": 443100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 444700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hambre",
+                        "Offset": 446300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 448700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 449100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enfermedad",
+                        "Offset": 450700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 455500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 456300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "así",
+                        "Offset": 463100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 467500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "cosas",
+                        "Offset": 469500000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 472700000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "salgo",
+                        "Offset": 473500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "muy",
+                        "Offset": 476300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "contadas",
+                        "Offset": 477900000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "reservas",
+                        "Offset": 481500000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "apenas",
+                        "Offset": 486700000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "queda",
+                        "Offset": 490700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 492300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 493900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "mundo",
+                        "Offset": 495500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 497500000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "natural",
+                        "Offset": 502300000,
+                        "Duration": 3200000
+                    }
+                ]
+            },
+            {
+                "Confidence": 0.82716495,
+                "Lexical": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas de reservas apenas queda en el mundo naturaleza natural",
+                "ITN": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas de reservas apenas queda en el mundo naturaleza natural",
+                "MaskedITN": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas de reservas apenas queda en el mundo naturaleza natural",
+                "Display": "y desdeñar el resto supondría según nos dice faustino cordón sacrificar la friolera de un millón de especies animales y medio millón de especies vegetales limitación inconcebible de un patrimonio que no podemos recrear y del que quizá dependieran los remedios para el hambre y la enfermedad de mañana así las cosas y es algo muy contadas de reservas apenas queda en el mundo naturaleza natural",
+                "Words": [
+                    {
+                        "Word": "y",
+                        "Offset": 305500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "desdeñar",
+                        "Offset": 307100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 311900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "resto",
+                        "Offset": 313500000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "supondría",
+                        "Offset": 315900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "según",
+                        "Offset": 320700000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "nos",
+                        "Offset": 323500000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "dice",
+                        "Offset": 324700000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "faustino",
+                        "Offset": 327100000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "cordón",
+                        "Offset": 331900000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "sacrificar",
+                        "Offset": 338700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 343500000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "friolera",
+                        "Offset": 345100000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 348700000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 349900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 351500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 353500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 354300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "animales",
+                        "Offset": 357900000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 362300000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "medio",
+                        "Offset": 363500000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "millón",
+                        "Offset": 366300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 369100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "especies",
+                        "Offset": 369900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "vegetales",
+                        "Offset": 373100000,
+                        "Duration": 6400000
+                    },
+                    {
+                        "Word": "limitación",
+                        "Offset": 383500000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "inconcebible",
+                        "Offset": 389500000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 396700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "un",
+                        "Offset": 398300000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "patrimonio",
+                        "Offset": 403900000,
+                        "Duration": 6000000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 409900000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "no",
+                        "Offset": 411100000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "podemos",
+                        "Offset": 411900000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "recrear",
+                        "Offset": 415100000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 419100000,
+                        "Duration": 1200000
+                    },
+                    {
+                        "Word": "del",
+                        "Offset": 420300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "que",
+                        "Offset": 423100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "quizá",
+                        "Offset": 424700000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "dependieran",
+                        "Offset": 427900000,
+                        "Duration": 7200000
+                    },
+                    {
+                        "Word": "los",
+                        "Offset": 435100000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "remedios",
+                        "Offset": 437900000,
+                        "Duration": 5200000
+                    },
+                    {
+                        "Word": "para",
+                        "Offset": 443100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 444700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "hambre",
+                        "Offset": 446300000,
+                        "Duration": 2400000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 448700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "la",
+                        "Offset": 449100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "enfermedad",
+                        "Offset": 450700000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 455500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "mañana",
+                        "Offset": 456300000,
+                        "Duration": 2800000
+                    },
+                    {
+                        "Word": "así",
+                        "Offset": 463100000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "las",
+                        "Offset": 467500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "cosas",
+                        "Offset": 469500000,
+                        "Duration": 3200000
+                    },
+                    {
+                        "Word": "y",
+                        "Offset": 472700000,
+                        "Duration": 400000
+                    },
+                    {
+                        "Word": "es",
+                        "Offset": 473100000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "algo",
+                        "Offset": 474700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "muy",
+                        "Offset": 476300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "contadas",
+                        "Offset": 477900000,
+                        "Duration": 3600000
+                    },
+                    {
+                        "Word": "de",
+                        "Offset": 481500000,
+                        "Duration": 800000
+                    },
+                    {
+                        "Word": "reservas",
+                        "Offset": 482300000,
+                        "Duration": 4400000
+                    },
+                    {
+                        "Word": "apenas",
+                        "Offset": 486700000,
+                        "Duration": 4000000
+                    },
+                    {
+                        "Word": "queda",
+                        "Offset": 490700000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "en",
+                        "Offset": 492300000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "el",
+                        "Offset": 493900000,
+                        "Duration": 1600000
+                    },
+                    {
+                        "Word": "mundo",
+                        "Offset": 495500000,
+                        "Duration": 2000000
+                    },
+                    {
+                        "Word": "naturaleza",
+                        "Offset": 497500000,
+                        "Duration": 4800000
+                    },
+                    {
+                        "Word": "natural",
+                        "Offset": 502300000,
+                        "Duration": 3200000
+                    }
+                ]
+            }
+        ]
+    }
+]
