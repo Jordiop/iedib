@@ -1,4 +1,48 @@
 # Pràctica 4: Azure
+
+# JORGE OSARENKHOE PETRO
+
+## Introducció
+
+En aquesta pràctica, treballarem amb Azure Machine Learning per crear un model de classificació utilitzant dades de pingüins. A més, explorarem el servei de veu d'Azure AI per convertir veu a text i text a veu. Aquesta pràctica està dividida en dos apartats principals:
+
+1. Classificació de pingüins amb Azure Machine Learning
+2. Servei de veu d'Azure AI
+
+### Objectius
+
+- Utilitzar Azure Machine Learning per entrenar i desplegar un model de classificació.
+- Documentar tot el procés d'entrenament, selecció de models, i desplegament del model.
+- Utilitzar el servei de veu d'Azure AI per convertir veu a text i text a veu.
+
+### Requisits
+
+- Compte d'Azure actiu.
+- Coneixements bàsics de Machine Learning i Python.
+- Accés a les dades dels pingüins (penguins_size.csv).
+
+### Estructura del document
+
+Aquest document està estructurat de la següent manera:
+
+1. **Apartat 1: Classificació de pingüins amb Azure Machine Learning**
+    - Creació del recurs
+    - Creació del workspace
+    - Importació del dataset
+    - Entrenament del model
+    - Visualització de resultats
+    - Neteja dels recursos
+
+2. **Apartat 2: Servei de veu d'Azure AI**
+    - Conversió de veu a text en temps real
+    - Conversió de text a veu utilitzant la galeria de veus
+
+### Nota
+
+Assegureu-vos de seguir tots els passos indicats i de documentar cada part del procés amb captures de pantalla i explicacions detallades. Això us ajudarà a entendre millor cada etapa i a tenir una referència clara per a futures pràctiques.
+
+<div style="page-break-after: always;"></div>
+
 ## Apartat 1: Classificació de pingüins amb Azure Machine Learning
 Tornarem a treballar amb un classificador sobre el conjunt de dades dels pingüins de l'arxipèlag Palmer. Recordau que podeu trobar les dades originals a Kaggle (fitxer penguins_size.csv) i una còpia al GitHub del curs.  
 
