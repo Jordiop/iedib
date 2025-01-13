@@ -1,5 +1,42 @@
-
 # Practica 4
+
+## Jorge Osarenkhoe Petro
+
+## Objectius
+
+En aquesta pràctica, treballarem amb dades massives utilitzant Apache Hive i Impala. Els objectius principals són:
+
+1. Crear taules externes i carregar dades des de fitxers CSV.
+2. Realitzar consultes SQL per extreure informació rellevant de les dades carregades.
+3. Treballar amb tipus de dades complexos en Hive.
+4. Comparar les diferències entre HiveQL i Impala SQL.
+5. Carregar i consultar dades JSON en Hive i Impala.
+
+## Estructura del Document
+
+1. **Creació de les Taules**
+    - Descripció de la creació de taules externes en Hive.
+    - Scripts SQL per a la creació de taules.
+
+2. **Importació de les Dades**
+    - Procediment per importar dades a les taules creades.
+    - Scripts SQL per carregar les dades.
+
+3. **Consultes**
+    - Consultes SQL per extreure informació de les dades.
+    - Resultats de les consultes amb captures de pantalla.
+
+4. **Apartat 1: Movies / TV Shows**
+    - Consultes específiques sobre programes de TV i pel·lícules.
+
+5. **Apartat 2: Biblioteques**
+    - Creació de taules amb tipus de dades complexos.
+    - Consultes sobre llibres i biblioteques.
+
+6. **Apartat 3: Centres Educatius de les Illes Balears**
+    - Carrega de dades JSON en Hive.
+    - Consultes sobre centres educatius.
+
 
 ## Creacio de les taules
 
@@ -306,12 +343,20 @@ A continuació, fent servir Impala (ja sigui des de Hue o des del shell), has d'
 
 Crearem la taula amb la seguent comanda:
 ```sql
-CREATE DATABASE IF NOT EXISTS illes 
+CREATE DATABASE IF NOT EXISTS centres
 
-CREATE EXTERNAL TABLE ext_centres (centre STRING)
-LOCATION '/user/hive/data'
+USE centres;
+```
+![alt text](image-15.png)
 
-CREATE TABLE illes.centre (
+```sql
+CREATE EXTERNAL TABLE extcentres (centre STRING)
+LOCATION '/user/cloudera/centres';
+```
+![alt text](image-16.png)
+
+```sql
+CREATE TABLE centres.centre (
     adreca STRING,
     cif STRING,
     codiIlla STRING,
@@ -330,7 +375,9 @@ CREATE TABLE illes.centre (
     tipusCentreNomCa STRING,
     web STRING
 ) STORED AS PARQUET;
+```
 
+```sql
 INSERT INTO TABLE centre
 SELECT
     get_json_object(centre,'$.adreca') AS adreca,
@@ -350,46 +397,45 @@ SELECT
     get_json_object(centre,'$.telf1') AS telf1,
     get_json_object(centre,'$.tipusCentreNomCa') AS tipusCentreNomCa,
     get_json_object(centre,'$.web') AS web
-FROM ext_centres;
+FROM extcentres;
+```
 
-SELECT *  FROM centre; 
-
--- Invalidem les taules per a que es refresquin les dades
-INVALIDATE METADATA centre;
-``` 
-![alt text](image-14.png)
+```sql
+INVALIDATE METADATA centres.centre;
+```
 
 - Recupera el nombre de centres públics (esPublic serà true) de l'illa d'Eivissa.
+
 ```sql
-SELECT COUNT(*) as total_centres
-FROM centres_educatius_final
-WHERE esPublic = true 
-AND nomIlla = 'Eivissa';
+SELECT COUNT(*)
+FROM centre
+WHERE nomilla = 'Eivissa' AND espublic=TRUE;
 ```
+![alt text](image-17.png)
 
 - Recupera el nom de tots els instituts d'educació secundària del municipi (nomMunicipi) de Palma.
 ```sql
 SELECT nom
-FROM centres_educatius_final
-WHERE tipusCentreNomCa = 'Institut d\'educació secundària'
-AND nomMunicipi = 'Palma';
+FROM centre
+WHERE nommunicipi='Palma' 
+AND LOWER(tipuscentrenomca) LIKE '%institut%educació secundària%';
 ```
+![alt text](image-18.png)
 
 - Recupera el nombre de centres de cada tipus (tipusCentreNomCa) de l'illa de Menorca.
 ```sql
-SELECT tipusCentreNomCa, COUNT(*) as total
-FROM centres_educatius_final
-WHERE nomIlla = 'Menorca'
-GROUP BY tipusCentreNomCa
-ORDER BY total DESC;
+SELECT COUNT(tipuscentrenomca), tipuscentrenomca
+FROM centre
+WHERE nomilla='Menorca'
+GROUP BY tipuscentrenomca;
 ```
+![alt text](image-19.png)
 
 - Recupera el nom de tots els centres de l'illa de Mallorca que ofereixen estudis de l'etapa (nomEtapa) "Grau superior".
 ```sql
 SELECT nom
-FROM centres_educatius_final
+FROM centres.centre t, t.nomEtapa etapa
 WHERE nomIlla = 'Mallorca'
-AND array_contains(nomEtapa, 'Grau superior');
+  AND etapa.item = 'Grau superior';
 ```
-
-![alt text](image-13.png)
+![alt text](image-20.png)
