@@ -1,0 +1,96 @@
+CREATE EXTERNAL TABLE raw_titles (
+    index INT,
+    id STRING,
+    title STRING,
+    type STRING,
+    release_year STRING,
+    age_certification STRING,
+    runtime STRING,
+    genres STRING,
+    production_countries STRING,
+    seasons DOUBLE,
+    imdb_id STRING,
+    imdb_score STRING,
+    imdb_votes STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+TBLPROPERTIES ('skip.header.line.count'='1');
+
+CREATE EXTERNAL TABLE raw_credits (
+    index INT,
+    person_id STRING,
+    id STRING,
+    name STRING,
+    character STRING,
+    `role` STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+TBLPROPERTIES ('skip.header.line.count'='1');
+
+---- 1 ----
+SELECT 
+    title,
+    seasons,
+    imdb_score
+FROM raw_titles
+WHERE type = 'SHOW' 
+    AND seasons > 1
+    AND imdb_score != ''
+ORDER BY CAST(imdb_score AS FLOAT) DESC
+LIMIT 10;
+
+---- 2 ----
+SELECT 
+    release_year,
+    SUM(CAST(imdb_votes AS FLOAT)) as total_votes
+FROM raw_titles
+WHERE type = 'SHOW' 
+    AND imdb_votes != ''
+GROUP BY release_year
+ORDER BY total_votes DESC
+LIMIT 10;
+
+--- 3 ---
+SELECT 
+    c.name,
+    COUNT(*) as movie_count
+FROM raw_credits c
+JOIN raw_titles t ON c.id = t.id
+WHERE c.`role` = 'DIRECTOR'
+    AND t.type = 'MOVIE'
+GROUP BY c.name
+ORDER BY movie_count DESC
+LIMIT 10;
+
+---- 4 ----
+SELECT 
+    c.name,
+    AVG(CAST(t.imdb_score AS FLOAT)) as avg_rating,
+    COUNT(*) as movie_count
+FROM raw_credits c
+JOIN raw_titles t ON c.id = t.id
+WHERE c.`role` = 'ACTOR'
+    AND t.type = 'MOVIE'
+    AND t.imdb_score != ''
+GROUP BY c.name
+HAVING COUNT(*) >= 5 
+ORDER BY avg_rating DESC
+LIMIT 10;
+
+---- 5 ----
+SELECT 
+    c.name,
+    AVG(CAST(t.imdb_score AS FLOAT)) as avg_rating,
+    COUNT(*) as movie_count
+FROM raw_credits c
+JOIN raw_titles t ON c.id = t.id
+WHERE c.`role` = 'ACTOR'
+    AND t.type = 'MOVIE'
+    AND t.imdb_score != ''
+GROUP BY c.name 
+ORDER BY avg_rating DESC
+LIMIT 10;

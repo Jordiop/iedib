@@ -1,0 +1,123 @@
+1. 
+create 'vehicles', 'info_general', 'conservacio', 'propietari', 'ubicacio'
+
+2. 
+put 'vehicles', '1', 'info_general:marca', 'Toyota'
+put 'vehicles', '1', 'info_general:model', 'Corolla'
+put 'vehicles', '1', 'info_general:matricula', '1234ABC'
+put 'vehicles', '1', 'info_general:preu', '12000'
+put 'vehicles', '1', 'conservacio:any', '2015'
+put 'vehicles', '1', 'conservacio:km', '120000'
+put 'vehicles', '1', 'conservacio:estat', 'bo'
+put 'vehicles', '1', 'propietari:nif', '12345678A'
+put 'vehicles', '1', 'propietari:nom', 'Joan Martínez'
+put 'vehicles', '1', 'propietari:telefon', '623456789'
+put 'vehicles', '1', 'propietari:mail', 'joan.martinez@email.com'
+put 'vehicles', '1', 'ubicacio:ciutat', 'Palma'
+put 'vehicles', '1', 'ubicacio:illa', 'Mallorca'
+put 'vehicles', '1', 'ubicacio:longitud', '2.650160'
+put 'vehicles', '1', 'ubicacio:latitud', '39.569600'
+
+put 'vehicles', '2', 'info_general:marca', 'Ford'
+put 'vehicles', '2', 'info_general:model', 'Focus'
+put 'vehicles', '2', 'info_general:matricula', '5678DEF'
+put 'vehicles', '2', 'info_general:preu', '15500'
+put 'vehicles', '2', 'conservacio:any', '2018'
+put 'vehicles', '2', 'conservacio:km', '55000'
+put 'vehicles', '2', 'conservacio:estat', 'molt bo'
+put 'vehicles', '2', 'propietari:nif', '87654321B'
+put 'vehicles', '2', 'propietari:nom', 'Ana García'
+put 'vehicles', '2', 'propietari:telefon', ''
+put 'vehicles', '2', 'propietari:mail', 'ana.garcia@email.com'
+put 'vehicles', '2', 'ubicacio:ciutat', 'Palma'
+put 'vehicles', '2', 'ubicacio:illa', 'Mallorca'
+
+put 'vehicles', '3', 'info_general:marca', 'Honda'
+put 'vehicles', '3', 'info_general:model', 'Civic'
+put 'vehicles', '3', 'info_general:matricula', '9012GHI'
+put 'vehicles', '3', 'info_general:preu', '18000'
+put 'vehicles', '3', 'conservacio:any', '2020'
+put 'vehicles', '3', 'conservacio:km', '20000'
+put 'vehicles', '3', 'conservacio:estat', 'bo'
+put 'vehicles', '3', 'propietari:nif', '11223344C'
+put 'vehicles', '3', 'propietari:nom', 'David López'
+put 'vehicles', '3', 'propietari:telefon', '655123456'
+put 'vehicles', '3', 'ubicacio:ciutat', 'Eivissa'
+put 'vehicles', '3', 'ubicacio:illa', 'Eivissa'
+put 'vehicles', '3', 'ubicacio:longitud', '1.452850'
+put 'vehicles', '3', 'ubicacio:latitud', '38.916280'
+
+3.
+
+4.
+get 'vehicles', '4'
+
+5.
+scan 'vehicles', {COLUMNS => 'info_general'}
+
+6.
+scan 'vehicles', {FILTER => "ValueFilter(=, 'binary:bo')"}
+
+7.
+scan 'vehicles', {FILTER => "ValueFilter(=, 'substring:Mallorca')"}
+
+8.
+scan 'vehicles', {FILTER => "SingleColumnValueFilter('info_general', 'any', >=, 'binary:2017') AND SingleColumnValueFilter('conservacio', 'km', <, 'binary:50000')"}
+
+9.
+put 'vehicles', '2', 'propietari:telefon', '656123321'
+
+10.
+deleteall 'vehicles', '5'
+
+11.
+CREATE EXTERNAL TABLE vehicles (
+  id string,
+  marca string,
+  model string,
+  matricula string,
+  preu int,
+  any int,
+  km int,
+  estat string,
+  nif string,
+  nom string,
+  telefon string,
+  mail string,
+  ciutat string,
+  illa string,
+  longitud double,
+  latitud double
+)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+  "hbase.columns.mapping" = ":key,
+  info_general:marca,
+  info_general:model,
+  info_general:matricula,
+  info_general:preu,
+  info_general:any,
+  conservacio:km,
+  conservacio:estat,
+  propietari:nif,
+  propietari:nom,
+  propietari:telefon,
+  propietari:mail,
+  ubicacio:ciutat,
+  ubicacio:illa,
+  ubicacio:longitud,
+  ubicacio:latitud"
+)
+TBLPROPERTIES("hbase.table.name" = "vehicles");
+
+12.
+SELECT * FROM vehicles WHERE ciutat = 'Palma';
+
+13.
+SELECT * FROM vehicles ORDER BY preu DESC LIMIT 3;
+
+14.
+SELECT estat, AVG(km) FROM vehicles GROUP BY estat;
+
+15.
+SELECT illa, COUNT(*) FROM vehicles GROUP BY illa;

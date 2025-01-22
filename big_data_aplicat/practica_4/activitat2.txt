@@ -1,0 +1,86 @@
+CREATE TABLE llibres (
+  id INT,
+  info_llibre STRUCT<titol:STRING, autor:STRING, any:INT>,
+  temes ARRAY<STRING>,
+  exemplars_biblioteca MAP<STRING,INT>
+)
+STORED AS PARQUET;
+
+INSERT INTO llibres
+SELECT 1, 
+       NAMED_STRUCT('titol','1984','autor','George Orwell','any',1949),
+       ARRAY('Ficció','Distopia','Societat'),
+       MAP('Centre',5,'Llevant',2)
+FROM (SELECT 1) dummy;
+
+INSERT INTO llibres
+SELECT 2,
+       NAMED_STRUCT('titol','Sapiens','autor','Yuval Noah Harari','any',2011),
+       ARRAY('Assaig','Història','Antropologia','Societat'),
+       MAP('Llevant',4,'Ponent',3)
+FROM (SELECT 1) dummy;
+
+INSERT INTO llibres
+SELECT 3,
+       NAMED_STRUCT('titol','Dune','autor','Frank Herbert','any',1965),
+       ARRAY('Ficció','Aventura','Ciència-ficció'),
+       MAP('Centre',7,'Ponent',2)
+FROM (SELECT 1) dummy;
+
+INSERT INTO llibres
+SELECT 4,
+       NAMED_STRUCT('titol','El Senyor dels anells','autor','J.R.R. Tolkien','any',1954),
+       ARRAY('Ficció','Aventura','Fantasia'),
+       MAP('Centre',8,'Llevant',3)
+FROM (SELECT 1) dummy;
+
+INSERT INTO llibres
+SELECT 5,
+       NAMED_STRUCT('titol','Història de dues ciutats','autor','Charles Dickens','any',1859),
+       ARRAY('Ficció','Història','Drama'),
+       MAP('Llevant',2)
+FROM (SELECT 1) dummy;
+
+---- 1 ---- 
+---- Hive ----
+SELECT info_llibre.titol
+FROM llibres
+WHERE info_llibre.any >= 1900 AND info_llibre.any < 2000;
+
+---- Impala ----
+SELECT info_llibre.titol
+FROM llibres
+WHERE info_llibre.any BETWEEN 1900 AND 1999;
+
+---- 2 ----
+---- Hive ----
+SELECT info_llibre.titol
+FROM llibres
+WHERE array_contains(temes, 'Història');
+
+---- Impala ----
+SELECT info_llibre.titol
+FROM llibres, llibres.temes AS temes_llibres
+WHERE temes_llibres.item = "Història"
+
+---- 3 ----
+---- Hive ----
+SELECT SUM(exemplars_biblioteca['Llevant']) as total_llevant
+FROM llibres;
+
+---- Impala ----
+SELECT SUM(copies_llibres.value)
+FROM llibres, llibres.exemplars_biblioteca AS copies_llibres
+WHERE copies_llibres.key = 'Llevant'
+
+---- 4 ----
+--- Hive -----
+SELECT info_llibre.titol
+FROM llibres
+WHERE array_contains(temes, 'Ficció')
+AND exemplars_biblioteca['Centre'] > 0;
+
+---- Impala ----
+SELECT info_llibre.titol
+FROM llibres, llibres.exemplars_biblioteca as copies_llibres, llibres.temes as temes_llibres
+WHERE copies_llibres.key = 'Centre' AND copies_llibres.value > 0 AND temes_llibres.item = 'Ficció'
