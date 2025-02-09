@@ -32,7 +32,7 @@ Faré ús de Claude AI que em pareix més potent que les altres opcions i a més
 6. Copiau i enganxau el vostre codi a un assistent i demanau-li que us l'expliqui.
 
 Resposta del prompt:
-```
+```markdown
 I'll break down this code which implements an audio recognition model created with Teachable Machine. Here's what's happening:
 
 1. **Initial Setup and Dependencies**
@@ -104,7 +104,7 @@ This code creates a continuous audio recognition system that:
 
 The model will keep running until either the page is closed or you implement a stop mechanism (there's a commented-out setTimeout example in the code that would stop after 5 seconds).
 ```
-
+```
 7. Pensau algun canvi de funcionalitat que volgueu afegir al sistema.
 
 - Afegir un botó de "Reset" per a tornar a l'estat inicial del sistema.
