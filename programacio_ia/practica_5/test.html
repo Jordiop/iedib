@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Audio Recognition</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .recording {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        .chart-container {
+            position: relative;
+            height: 200px;
+            margin: 20px 0;
+        }
+        .history-container {
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .threshold-control {
+            margin: 20px 0;
+        }
+        .prediction-card {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .confidence-high {
+            border-left: 4px solid #28a745;
+        }
+        .confidence-medium {
+            border-left: 4px solid #ffc107;
+        }
+        .confidence-low {
+            border-left: 4px solid #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enhanced Audio Recognition</h1>
+        
+        <div class="controls">
+            <button id="startButton" onclick="toggleRecording()">Start Recording</button>
+            <button id="clearButton" onclick="clearHistory()">Clear History</button>
+            <button id="downloadButton" onclick="downloadHistory()">Download Results</button>
+        </div>
+
+        <div id="statusIndicator" class="status"></div>
+
+        <div class="threshold-control">
+            <label for="thresholdSlider">Confidence Threshold: <span id="thresholdValue">0.75</span></label>
+            <input type="range" id="thresholdSlider" min="0" max="1" step="0.05" value="0.75" 
+                   oninput="updateThreshold(this.value)">
+        </div>
+
+        <div class="chart-container">
+            <canvas id="predictionChart"></canvas>
+        </div>
+
+        <div id="label-container"></div>
+
+        <div class="history-container">
+            <h3>Recognition History</h3>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <script>
+        const URL = "https://teachablemachine.withgoogle.com/models/54uOD-Dmk/";
+        let recognizer;
+        let isRecording = false;
+        let predictionHistory = [];
+        let chart;
+        let confidenceThreshold = 0.75;
+
+        // Initialize Chart.js
+        function initChart(labels) {
+            const ctx = document.getElementById('predictionChart').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Confidence Scores',
+                        data: new Array(labels.length).fill(0),
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 1
+                        }
+                    },
+                    animation: {
+                        duration: 100
+                    }
+                }
+            });
+        }
+
+        async function createModel() {
+            const checkpointURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+
+            recognizer = speechCommands.create(
+                "BROWSER_FFT",
+                undefined,
+                checkpointURL,
+                metadataURL);
+
+            await recognizer.ensureModelLoaded();
+            return recognizer;
+        }
+
+        async function init() {
+            recognizer = await createModel();
+            const classLabels = recognizer.wordLabels();
+            
+            // Initialize chart with class labels
+            initChart(classLabels);
+            
+            // Create prediction cards for each label
+            const labelContainer = document.getElementById("label-container");
+            labelContainer.innerHTML = ''; // Clear existing content
+            
+            classLabels.forEach((label, index) => {
+                const card = document.createElement("div");
+                card.className = "prediction-card";
+                card.id = `prediction-${index}`;
+                labelContainer.appendChild(card);
+            });
+
+            // Enable controls
+            document.getElementById('startButton').disabled = false;
+        }
+
+        function updateThreshold(value) {
+            confidenceThreshold = parseFloat(value);
+            document.getElementById('thresholdValue').textContent = value;
+        }
+
+        function toggleRecording() {
+            if (!isRecording) {
+                startRecording();
+            } else {
+                stopRecording();
+            }
+        }
+
+        function startRecording() {
+            isRecording = true;
+            document.getElementById('startButton').textContent = 'Stop Recording';
+            document.getElementById('statusIndicator').className = 'status recording';
+            document.getElementById('statusIndicator').textContent = 'Recording...';
+
+            recognizer.listen(result => {
+                const scores = result.scores;
+                updatePredictions(scores, recognizer.wordLabels());
+            }, {
+                includeSpectrogram: true,
+                probabilityThreshold: confidenceThreshold,
+                invokeCallbackOnNoiseAndUnknown: true,
+                overlapFactor: 0.50
+            });
+        }
+
+        function stopRecording() {
+            isRecording = false;
+            document.getElementById('startButton').textContent = 'Start Recording';
+            document.getElementById('statusIndicator').className = 'status';
+            document.getElementById('statusIndicator').textContent = 'Stopped';
+            recognizer.stopListening();
+        }
+
+        function updatePredictions(scores, labels) {
+            // Update chart
+            chart.data.datasets[0].data = scores;
+            chart.update();
+
+            // Update prediction cards
+            scores.forEach((score, index) => {
+                const card = document.getElementById(`prediction-${index}`);
+                const confidence = score.toFixed(2);
+                
+                // Update card content
+                card.innerHTML = `
+                    <strong>${labels[index]}:</strong> ${(confidence * 100).toFixed(1)}%
+                `;
+                
+                // Update card styling based on confidence
+                card.className = 'prediction-card ' + 
+                    (confidence > 0.8 ? 'confidence-high' : 
+                     confidence > 0.5 ? 'confidence-medium' : 
+                     'confidence-low');
+            });
+
+            // Add to history if highest confidence exceeds threshold
+            const maxConfidence = Math.max(...scores);
+            if (maxConfidence >= confidenceThreshold) {
+                const timestamp = new Date().toLocaleTimeString();
+                const predictedLabel = labels[scores.indexOf(maxConfidence)];
+                
+                predictionHistory.unshift({
+                    timestamp,
+                    label: predictedLabel,
+                    confidence: maxConfidence
+                });
+
+                updateHistory();
+            }
+        }
+
+        function updateHistory() {
+            const historyList = document.getElementById('historyList');
+            historyList.innerHTML = predictionHistory
+                .slice(0, 50) // Keep only last 50 predictions
+                .map(pred => `
+                    <div class="prediction-card confidence-${pred.confidence > 0.8 ? 'high' : pred.confidence > 0.5 ? 'medium' : 'low'}">
+                        ${pred.timestamp}: ${pred.label} (${(pred.confidence * 100).toFixed(1)}%)
+                    </div>
+                `)
+                .join('');
+        }
+
+        function clearHistory() {
+            predictionHistory = [];
+            updateHistory();
+        }
+
+        function downloadHistory() {
+            const csv = [
+                ['Timestamp', 'Prediction', 'Confidence'],
+                ...predictionHistory.map(pred => [
+                    pred.timestamp,
+                    pred.label,
+                    pred.confidence
+                ])
+            ].map(row => row.join(',')).join('\n');
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('hidden', '');
+            a.setAttribute('href', url);
+            a.setAttribute('download', 'recognition_history.csv');
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        // Initialize the application
+        init();
+    </script>
+</body>
+</html>
