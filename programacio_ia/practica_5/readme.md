@@ -1,5 +1,4 @@
 ## Projecte amb Teachable Machine
-
 Aquesta tasca té dues parts, la primera amb Teachable Machine i la segona amb un assistent de programació.
 ### Part A
 Realitzau un projecte semblant al dels apunts, seguint les passes següents
@@ -22,7 +21,7 @@ Realitzau un projecte semblant al dels apunts, seguint les passes següents
 
 5. Publicau una pàgina web que utilitzi el vostre model, per exemple a GitHub Pages, CodePen. Si voleu usar un altre servei, o un domini propi, perfecte.
 
-- [Model desplegat a Github IO](https://jordiop.github.io/teachable-machine-sound/)
+- [Model desplegat a Github IO](https://jordiop.github.io/teachable-machine-sound-prime)
 
 ### Part B
 Estudiau i millorau el codi que us ha oferit Teachable Machine fent ús d'un assistent (Canvas de ChatGPT, Gemini, Copilot)
@@ -32,7 +31,7 @@ Faré ús de Claude AI que em pareix més potent que les altres opcions i a més
 6. Copiau i enganxau el vostre codi a un assistent i demanau-li que us l'expliqui.
 
 Resposta del prompt:
-```markdown
+
 I'll break down this code which implements an audio recognition model created with Teachable Machine. Here's what's happening:
 
 1. **Initial Setup and Dependencies**
@@ -103,8 +102,7 @@ This code creates a continuous audio recognition system that:
 4. Updates these probabilities continuously until stopped
 
 The model will keep running until either the page is closed or you implement a stop mechanism (there's a commented-out setTimeout example in the code that would stop after 5 seconds).
-```
-```
+
 7. Pensau algun canvi de funcionalitat que volgueu afegir al sistema.
 
 - Afegir un botó de "Reset" per a tornar a l'estat inicial del sistema.
@@ -127,6 +125,6 @@ El codi donat se comporta com s'esperava.
 
 10. Publicau el vostre sistema millorat en una URL diferent, de forma que es puguin comparar tots dos.
 
-- [Model desplegat a Github IO](https://jordiop.github.io/teachable-machine-sound-prime/)
+- [Model desplegat a Github IO](https://jordiop.github.io/teachable-machine-sound/)
 
 Lliurau un document amb una captura de cada passa i les URLs on es puguin provar els vostres dos sistemes.
