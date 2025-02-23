@@ -16,7 +16,7 @@ Digues si després de fer el canvi, les sumes de verificació han canviat o no.
 
 Com es pot observarm les tres sumes de verificació canvien amb un lleu canvi al arxiu 
 
-Apartat 2: Eines internes de monitoratge de Hadoop
+# Apartat 2: Eines internes de monitoratge de Hadoop
 
 En la Cloudera QuickStart VM, fes les següents captures de pantalla i insereix-les en el teu document:
 
@@ -41,5 +41,32 @@ Conte 929 blocs
 
 Executa un treball en Pig i inclou també la captura del YARN ResourceManager. Indica si hi ha algun canvi respecte de la captura anterior del ResourceManager.
 
+![alt text](image-8.png)
+
+# Apartat 3: Ganglia
+
+Amb el clúster Hadoop del Lliurament 1 (si ho prefereixes, basta amb dos nodes, un mestre i un esclau), fes les següents captures de pantalla de la interfície web de Ganglia i insereix-les en el teu document:
+
+- Pàgina inicial de la interfície web de Ganglia. Quin ha estat l'ús màxim de memòria en la darrera hora (en MB)? I quin ha estat l'ús més alt de CPU pel sistema en la darrera hora (en %)?
+
+- Gràfiques de la mètrica cpu_idle en els 3 nodes del clúster
+
+- Visió del host mestre
+
+- Gràfiques de les mètriques de xarxa del host mestre
+
+A continuació, atura un node esclau i, passats uns segons, torna a carregar la pàgina inicial de la interfície de Ganglia. Inclou una captura de pantalla de les mètriques on es vegi que hi ha un host caigut.
 
 
+# Apartat 4: Apache Ambari
+
+En el HortonWorks Sandbox HDP (o qualsevol altra màquina amb Hadoop i Apache Ambari instal·lats), fes les següents captures de pantalla de la interfície web d'Ambari i insereix-les en el teu document:
+
+- Vista general del Dashboard. En quin percentatge estan el heap del NameNode i l'ús de disc HDFS?
+![alt text](image-9.png)
+
+- Resum de les mètriques del servei HDFS
+![alt text](image-10.png)
+
+- Vista de les alertes del sistema
+![alt text](image-11.png)
