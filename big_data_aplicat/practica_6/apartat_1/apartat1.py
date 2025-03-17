@@ -1,43 +1,45 @@
 from kafka import KafkaConsumer
-from hdfs import InsecureClient
-import time
 import datetime
-import io
+import subprocess
+import tempfile
+import os
 
 # Configuration
 KAFKA_BOOTSTRAP_SERVERS = 'localhost:9092'
 KAFKA_TOPIC = 'sensor-data'
-HDFS_URL = 'http://localhost:9870/webhdfs/v1'  
-HDFS_USER = 'hadoop'  
-HDFS_OUTPUT_FILE = '/home/hadoop/Escritorio/practica6/fitxer.csv'
+HDFS_OUTPUT_PATH = '/user/hadoop/sensor_data.csv'
 
 def convert_to_timestamp(date_str, time_str):
-    """Convert date and time strings to Unix timestamp"""
     date_format = "%d/%m/%Y %H:%M:%S"
     datetime_str = f"{date_str} {time_str}"
     dt_object = datetime.datetime.strptime(datetime_str, date_format)
     return int(dt_object.timestamp())
+
+def ensure_hdfs_path():
+    dir_path = os.path.dirname(HDFS_OUTPUT_PATH)
+    subprocess.run(['hdfs', 'dfs', '-mkdir', '-p', dir_path], check=False)
+    
+    check_cmd = subprocess.run(['hdfs', 'dfs', '-test', '-e', HDFS_OUTPUT_PATH], check=False)
+    if check_cmd.returncode != 0:
+        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp.close()
+        subprocess.run(['hdfs', 'dfs', '-put', tmp.name, HDFS_OUTPUT_PATH], check=False)
+        os.unlink(tmp.name)
+        print(f"Created HDFS file: {HDFS_OUTPUT_PATH}")
 
 def main():
     consumer = KafkaConsumer(
         KAFKA_TOPIC,
         bootstrap_servers=KAFKA_BOOTSTRAP_SERVERS,
         auto_offset_reset='earliest',
-        enable_auto_commit=True,
         group_id='sensor-data-consumer'
     )
     
-    hdfs_client = InsecureClient(HDFS_URL, user=HDFS_USER)
-    buffer = io.StringIO()
-    record_count = 0
+    ensure_hdfs_path()
     
-    print(f"Conectat al tema {KAFKA_TOPIC}. Esperant missatges...")
+    print(f"Connected to topic {KAFKA_TOPIC}. Waiting for messages...")
     
     try:
-        if not hdfs_client.status(HDFS_OUTPUT_FILE, strict=False):
-            hdfs_client.write(HDFS_OUTPUT_FILE, data='', overwrite=True)
-            print(f"Creat fitxer nou a HDFS: {HDFS_OUTPUT_FILE}")
-        
         for message in consumer:
             msg_value = message.value.decode('utf-8')
             parts = msg_value.strip().split(',')
@@ -50,31 +52,26 @@ def main():
                 humidity = float(humidity_str)
                 pressure = int(float(pressure_str))
                 
+                tmp = tempfile.NamedTemporaryFile(delete=False, mode='w')
                 new_line = f"{unix_timestamp};{temperature};{pressure};{humidity}\n"
-                buffer.write(new_line)
-                record_count += 1
+                tmp.write(new_line)
+                tmp.close()
                 
-                print(f"Processat registre: {new_line.strip()}")
+                subprocess.run([
+                    'hdfs', 'dfs', '-appendToFile', tmp.name, HDFS_OUTPUT_PATH
+                ], check=False)
                 
-                if record_count >= 10:
-                    buffer.seek(0)
-                    hdfs_client.write(HDFS_OUTPUT_FILE, data=buffer.getvalue(), append=True)
-                    print(f"Escrits {record_count} registres a HDFS")
-                    buffer = io.StringIO()
-                    record_count = 0
+                os.unlink(tmp.name)
+                
+                print(f"Processed and appended: {new_line.strip()}")
             else:
-                print(f"Format incorrecte del missatge: {msg_value}")
+                print(f"Incorrect message format: {msg_value}")
     
     except KeyboardInterrupt:
-        print("Aturant el consumidor...")
+        print("Stopping consumer...")
     finally:
-        if record_count > 0:
-            buffer.seek(0)
-            hdfs_client.write(HDFS_OUTPUT_FILE, data=buffer.getvalue(), append=True)
-            print(f"Escrits {record_count} registres a HDFS")
-        
         consumer.close()
-        print("Consumidor tancat correctament")
+        print("Consumer closed correctly")
 
 if __name__ == "__main__":
     main()
