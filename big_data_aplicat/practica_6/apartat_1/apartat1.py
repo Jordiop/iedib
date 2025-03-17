@@ -4,12 +4,12 @@ import time
 import datetime
 import io
 
-# globals
+# Configuration
 KAFKA_BOOTSTRAP_SERVERS = 'localhost:9092'
 KAFKA_TOPIC = 'sensor-data'
-HDFS_URL = 'http://localhost:9870'  
-HDFS_USER = 'hdfs'
-HDFS_OUTPUT_FILE = '/sensor_data/readings.csv'
+HDFS_URL = 'http://localhost:9870/webhdfs/v1'  
+HDFS_USER = 'hadoop'  
+HDFS_OUTPUT_FILE = '/home/hadoop/Escritorio/practica6/fitxer.csv'
 
 def convert_to_timestamp(date_str, time_str):
     """Convert date and time strings to Unix timestamp"""
