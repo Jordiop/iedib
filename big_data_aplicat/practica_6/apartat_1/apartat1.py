@@ -7,7 +7,7 @@ import os
 # Configuration
 KAFKA_BOOTSTRAP_SERVERS = 'localhost:9092'
 KAFKA_TOPIC = 'sensor-data'
-HDFS_OUTPUT_PATH = '/user/hadoop/sensor_data.csv'
+HDFS_OUTPUT_PATH = '/sensor_data.csv'
 
 def convert_to_timestamp(date_str, time_str):
     date_format = "%d/%m/%Y %H:%M:%S"
