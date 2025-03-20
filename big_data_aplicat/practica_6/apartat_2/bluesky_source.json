@@ -1,0 +1,22 @@
+{
+    "name": "bluesky-source",
+    "config": {
+      "connector.class": "com.github.jcustenborder.kafka.connect.bluesky.BlueskySourceConnector",
+      "tasks.max": "1",
+      "kafka.topic": "bluesky_messages",
+      "bluesky.search.query": "Catalunya",
+      "bluesky.credentials.identifier": "${BLUESKY_IDENTIFIER}",
+      "bluesky.credentials.password": "${BLUESKY_PASSWORD}",
+      "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "key.converter.schemas.enable": "false",
+      "value.converter.schemas.enable": "true",
+      "transforms": "flatten,renameStruct,selectFields",
+      "transforms.flatten.type": "org.apache.kafka.connect.transforms.Flatten$Value",
+      "transforms.flatten.delimiter": ".",
+      "transforms.renameStruct.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
+      "transforms.renameStruct.renames": "id.uri:uri,id.cid:cid,author.handle:handle,author.displayName:displayName,author.avatar:avatar",
+      "transforms.selectFields.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
+      "transforms.selectFields.whitelist": "uri,cid,text,createdAt,handle,displayName,avatar"
+    }
+  }

@@ -1,0 +1,21 @@
+{
+    "name": "mysql-sink",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "tasks.max": "1",
+      "topics": "bluesky_messages",
+      "connection.url": "jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}",
+      "connection.user": "${MYSQL_USER}",
+      "connection.password": "${MYSQL_PASSWORD}",
+      "auto.create": "true",
+      "auto.evolve": "true",
+      "delete.enabled": "false",
+      "insert.mode": "insert",
+      "pk.mode": "none",
+      "table.name.format": "bluesky_posts",
+      "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "key.converter.schemas.enable": "false",
+      "value.converter.schemas.enable": "true"
+    }
+  }
