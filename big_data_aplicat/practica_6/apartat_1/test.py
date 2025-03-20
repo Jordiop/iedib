@@ -1,30 +1,35 @@
 #!/usr/bin/env python3
 import json
+import uuid
 from datetime import datetime
 from kafka import KafkaConsumer
 from hdfs import InsecureClient
 import traceback
+import os
 
 # Configuración
 KAFKA_TOPIC = 'sensor-data'
 BOOTSTRAP_SERVERS = ['localhost:9092']
 HDFS_URL = 'http://hadoopmaster:9870'
 HDFS_USER = 'hadoop'
-HDFS_FILE = '/user/hadoop/kafka/section1.csv'
+HDFS_DIR = '/user/hadoop/kafka'
+HDFS_FILE_PREFIX = 'sensor_data_'
 DATETIME_FORMAT = '%d/%m/%Y %H:%M:%S'
 
 # Cliente HDFS
 hdfs_client = InsecureClient(HDFS_URL, user=HDFS_USER)
 
-# Crear archivo si no existe
-if not hdfs_client.status(HDFS_FILE, strict=False):
-    with hdfs_client.write(HDFS_FILE, overwrite=True) as writer:
-        writer.write(b'')
-        print(f"Se ha creado el archivo HDFS: {HDFS_FILE}")
+# Asegurar que el directorio existe
+try:
+    if not hdfs_client.status(HDFS_DIR, strict=False):
+        hdfs_client.makedirs(HDFS_DIR)
+        print(f"Se ha creado el directorio HDFS: {HDFS_DIR}")
+except Exception as e:
+    print(f"Error al verificar/crear directorio: {e}")
 
 def process_csv_message(raw_message):
     """
-    Procesa un mensaje en formato CSV directo
+    Procesa un mensaje en formato CSV directo y lo escribe en un archivo único en HDFS
     """
     try:
         # Decodificar bytes a string
@@ -45,23 +50,33 @@ def process_csv_message(raw_message):
         
         # Procesar fecha y hora
         datetime_str = f'{values[0]} {values[1]}'
-        datatime_value = datetime.now().strftime(DATETIME_FORMAT)  # Valor por defecto
         
         try:
-            datatime_value = datetime.strptime(datetime_str, DATETIME_FORMAT).strftime(DATETIME_FORMAT)
+            # Intentar parsear la fecha/hora del mensaje
+            parsed_datetime = datetime.strptime(datetime_str, DATETIME_FORMAT)
+            timestamp = parsed_datetime.strftime('%Y%m%d%H%M%S')
         except ValueError as e:
             print(f'Error: Formato de fecha/hora inválido: {datetime_str}')
-            print(f'Usando hora actual: {datatime_value}')
+            # Usar hora actual como respaldo
+            timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
         
-        # Construir línea CSV correctamente (en este caso es el mismo que el original, pero podría procesarse)
+        # Generar un ID único para evitar colisiones
+        unique_id = str(uuid.uuid4())[:8]
+        
+        # Construir nombre de archivo único para este mensaje
+        # Formato: sensor_data_YYYYMMDDHHMMSS_uuid.csv
+        filename = f"{HDFS_FILE_PREFIX}{timestamp}_{unique_id}.csv"
+        hdfs_path = f"{HDFS_DIR}/{filename}"
+        
+        # Construir línea CSV correctamente
         csv_line = f'{values[0]},{values[1]},{values[2]},{values[3]},{values[4]}\n'.encode('utf-8')
         print(f"Línea CSV a escribir: {csv_line}")
         
-        # Escribir en HDFS
-        with hdfs_client.write(HDFS_FILE, append=True) as writer:
+        # Escribir en un archivo nuevo en HDFS (sin usar append)
+        with hdfs_client.write(hdfs_path, overwrite=True) as writer:
             writer.write(csv_line)
             
-        print("Datos escritos en HDFS con éxito")
+        print(f"Datos escritos en HDFS con éxito: {hdfs_path}")
             
     except Exception as e:
         print(f"Error al procesar o escribir datos: {e}")
@@ -80,7 +95,7 @@ def main():
             bootstrap_servers=BOOTSTRAP_SERVERS,
             auto_offset_reset='earliest',
             enable_auto_commit=True,
-            group_id='sensor-data-consumer',
+            group_id='sensor-data-consumer'
             # Sin deserializador - recibimos bytes crudos
         )
         
