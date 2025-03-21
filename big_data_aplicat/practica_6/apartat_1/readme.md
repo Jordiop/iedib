@@ -53,11 +53,35 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic sensor-d
 ```
 
 Python consumer:
+
+##### IMPORTANT
+
+Després d'un debugging molt profund, posaré a disposició de l'activitat els problemes amb el append i la creació i modificació del arxiu de hdfs. La solució, després de mirar els fòrums, documentació, Stack Overflow, GitHub, ha estat demanar ajuda. Kudos a Carlos (@CharlyMech), amb el qual hem tengut converses sobre aquesta activitat. Al final, entre ell i un poc de Claude 3.7, he aconseguit fer un script que sí que em fa append però que sé que és overkill (buffers, pujar l'arxiu sencer cada vegada, etc)
+
+En el proces, hi ha la cerca i creacio del reparador.sh, que és un cleaner de tot el de hadoop, sospitant que posiblement, el major dels problemes fos més el "cluster" que no tant el script. Inclus així, trob que és necessari donar el context i el perquè de tot.
+
 ```python
 python hdfs_consumer.py
 ```
+
+![alt text](images/image-3.png)
 
 Checkear que les dades s'han guardat correctament:
 ```bash
 hdfs dfs -cat /sensor_data/readings.csv
 ```
+
+![alt text](images/image-4.png)
+
+El log disponible qeu tenc el el server.log. El connect.log no existeix en cap part del sistema, imagin que perque a la server-config, es fica a una carpeta que no existeix
+
+![alt text](images/image-5.png)
+
+```bash
+# Del server-properties
+# A comma separated list of directories under which to store log files
+log.dirs=/tmp/kafka-logs
+```
+
+Directori del kafka 
+![alt text](images/image-6.png)
