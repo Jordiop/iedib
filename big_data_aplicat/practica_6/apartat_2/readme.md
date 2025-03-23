@@ -1,72 +1,30 @@
-## Apartat 2
+### Apartat 2
 
-```sql
-CREATE TABLE bluesky_posts (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  uri VARCHAR(255) NOT NULL,
-  cid VARCHAR(255) NOT NULL,
-  text TEXT,
-  createdAt TIMESTAMP,
-  handle VARCHAR(255),
-  displayName VARCHAR(255),
-  avatar VARCHAR(512),
-  UNIQUE KEY unique_post (uri, cid)
-);
-```
+Descarregarem el connector proporcionat als apunts
 
-```
-bootstrap.servers=localhost:9092
-group.id=bluesky-connect-cluster
-key.converter=org.apache.kafka.connect.json.JsonConverter
-value.converter=org.apache.kafka.connect.json.JsonConverter
-key.converter.schemas.enable=false
-value.converter.schemas.enable=true
+![alt text](image.png)
 
-offset.storage.topic=connect-offsets
-offset.storage.replication.factor=1
-config.storage.topic=connect-configs
-config.storage.replication.factor=1
-status.storage.topic=connect-status
-status.storage.replication.factor=1
+Aprofitant el aprenentage que me ha donat el apartat 1 sobre un poc de scripting, he procedit a fer un script molt simple per arrancar tot i aixi fer tota la feina amb una comanda.
 
-plugin.path=/usr/share/java,/usr/local/share/kafka/plugins
+!Disclaimer
+Estava aprofitant el us de la maquina de Hadoop, i se ha hagut de actualitzar java. `dnf yum install java21-openjdk-devel`
 
-rest.port=8083
-rest.advertised.host.name=localhost
-```
+Una vegada executada nomes la part de bluesky, tenim el output que se pot trobar al resultat1.txt o es pot veure en aquesta foto
+![alt text](image-1.png)
 
+Aixi com va avancant la activitat, canviare la cerca per ser mes precis i veure correctament el post que fagi, ja que com es pot veure, "ai" es un terme un tant empleat
 
-```bash
-#!/bin/bash
+Eliminam el connector actual:
+`curl -X DELETE http://localhost:8083/connectors/bluesky`
 
-# Carregar variables d'entorn
-export BLUESKY_IDENTIFIER="tu-compte@bsky.social"
-export BLUESKY_PASSWORD="tu-contrasenya"
-export MYSQL_HOST="localhost"
-export MYSQL_PORT="3306"
-export MYSQL_DATABASE="bluesky_db"
-export MYSQL_USER="usuari"
-export MYSQL_PASSWORD="contrasenya"
+Ara, en adicio, es demana que es fagi un upsert del missatge a MySQL. Procedirem amb el mysql-sink.json
 
-# Iniciar Kafka Connect en mode distribuït
-echo "Iniciant Kafka Connect en mode distribuït..."
-$KAFKA_HOME/bin/connect-distributed.sh $KAFKA_HOME/config/connect-distributed.properties &
+![alt text](image-2.png)
 
-# Esperar que el servei estigui disponible
-echo "Esperant que Kafka Connect estigui disponible..."
-sleep 10
+I ara anirem a checkear la base de dades:
 
-# Registrar el connector Bluesky Source
-echo "Configurant el connector Bluesky Source..."
-curl -X POST http://localhost:8083/connectors \
-  -H "Content-Type: application/json" \
-  -d @bluesky-source-connector.json
+![alt text](image-3.png)
 
-# Registrar el connector MySQL Sink
-echo "Configurant el connector MySQL Sink..."
-curl -X POST http://localhost:8083/connectors \
-  -H "Content-Type: application/json" \
-  -d @mysql-sink-connector.json
+De la primera vegada que he encolat els missatges sense filtrar massa el topic, hi ha 300 inserts. Ara probare nomes amb el exclussiu.
 
-echo "Sistema configurat correctament!"
-```
+![alt text](image-4.png)
