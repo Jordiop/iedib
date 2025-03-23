@@ -1,0 +1,12 @@
+{
+    "name": "sensor-data-source",
+    "config": {
+        "connector.class": "FileStreamSource",
+        "tasks.max": "1",
+        "file": "resultat.csv",
+        "topic": "sensor-data",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "mode": "tail"
+    }
+}
