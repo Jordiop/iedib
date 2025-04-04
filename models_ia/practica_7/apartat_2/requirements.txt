@@ -1,0 +1,5 @@
+keras==3.8.0
+keras_cv==0.9.0
+matplotlib==3.10.1
+numpy==2.2.4
+Pillow==11.1.0
