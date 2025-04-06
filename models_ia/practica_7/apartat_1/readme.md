@@ -87,7 +87,17 @@ No crearé més capítols, ja que el llibre és massa llarg. En el moment de fer
 
 3) Obteniu la URL de la conversa i afegiu-la al quadern de Colab que lliurareu en aquesta tasca.
 
-[Capitols 1, 2 i 3](https://claude.ai/share/c9680f64-5f14-4303-ac28-bed2c468bd53)
+Capitol 1: 
+- Site: [Capitol 1 web](https://claude.site/artifacts/a8e6de69-c8d1-4c54-b2c7-4eab35d7a173)
+- Conversation: [Capitol 1 conversa](https://claude.ai/share/c9680f64-5f14-4303-ac28-bed2c468bd53)
+
+Capitol 2:
+- Site: [Capitol 2 web](https://claude.site/artifacts/cd5e3a08-472f-4405-ad37-e0536ab55315)
+- Conversation: [Capitol 2 conversa](https://claude.ai/share/c9680f64-5f14-4303-ac28-bed2c468bd53)
+
+Capitol 3:
+- Site: [Capitol 3 web](https://claude.site/artifacts/23e34483-1382-4bb2-a838-ef3adf06c000)
+- Conversation: [Capitol 3 conversa](https://claude.ai/share/c9680f64-5f14-4303-ac28-bed2c468bd53)
 
 4) Valorau el resultat obtingut. Fins a quin punt serveix com a producte final? Necessita molta més feina? El resultat és més bo o més dolent del que esperàveu?
 
